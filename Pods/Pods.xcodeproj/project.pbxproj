@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		058F9364DFC635F78BF0C7D1594C6B0E /* Pods-NPO Live-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D41F99D77EA189249A4B32BF1F06B /* Pods-NPO Live-dummy.m */; };
+		32D35BEBF82870B41EF898533F18FD52 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C16169A2660EFF39BA03C675DAE51A /* String+Extension.swift */; };
+		3545B63555D3C8C7AA34EDDFCED198A5 /* NPOStream.h in Headers */ = {isa = PBXBuildFile; fileRef = D317FD5DF1BD8B53BD95F42197720C3E /* NPOStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3856FBD287E818C48691278F999AE30E /* ChannelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA400D06F324D57775FA3FBBB0CD6B35 /* ChannelProvider.swift */; };
+		69D34A9EFF08F3A2B9697B4ED84BD83B /* NPOStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1D951D6D93BEE47DC0E48EE99AC150 /* NPOStream.swift */; };
+		85E40CD5B52B0D130C6DF54A9881D4E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E184A7CBDD11C7A10659350AEDCE81F /* Foundation.framework */; };
+		85E86CFD559C8CB455DC06F618755162 /* NPOStream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E358063A6837B48DEFA3640D78D2CD /* NPOStream-dummy.m */; };
+		9CF32D9D60509AA4D621A05991686D96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E184A7CBDD11C7A10659350AEDCE81F /* Foundation.framework */; };
+		A0FF97DF4EBD5C45B6C46576D5A46A23 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 225FDFE32ACFAECE50A4261348CC2D90 /* Info.plist */; };
+		E31DBA4EAC520A6BA0CD12012FF42093 /* Pods-NPO Live-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C7311374E368D23C2E281A173A9A59C /* Pods-NPO Live-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED02C7075610F2160E3B111DAF00D07B /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E81CB0BFB4792786CBC439C6BB7AEE /* Channel.swift */; };
+		ED34DA4BF06D7F73FA1245EE86A33E1F /* NPOStream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2973EC69644A565F9FC9118ED6040F84 /* NPOStream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		101FA608A86908BB356092114CD0FCD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F94049D73DA249793CF4130B4F547C9;
+			remoteInfo = NPOStream;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		010D41F99D77EA189249A4B32BF1F06B /* Pods-NPO Live-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NPO Live-dummy.m"; sourceTree = "<group>"; };
+		09D919728AA602444061C933B2D76AA1 /* Pods-NPO Live-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NPO Live-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0AFF127BC6B41F6BDF687F2DF66F9AD5 /* NPOStream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NPOStream-prefix.pch"; sourceTree = "<group>"; };
+		0F1D951D6D93BEE47DC0E48EE99AC150 /* NPOStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NPOStream.swift; sourceTree = "<group>"; };
+		0F3091003DB4B523D3BE88E41B1C1441 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11E358063A6837B48DEFA3640D78D2CD /* NPOStream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NPOStream-dummy.m"; sourceTree = "<group>"; };
+		225FDFE32ACFAECE50A4261348CC2D90 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2973EC69644A565F9FC9118ED6040F84 /* NPOStream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NPOStream-umbrella.h"; sourceTree = "<group>"; };
+		3037F3B79361E15F339DAB38A00AC37A /* NPOStream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NPOStream.modulemap; sourceTree = "<group>"; };
+		3C7311374E368D23C2E281A173A9A59C /* Pods-NPO Live-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NPO Live-umbrella.h"; sourceTree = "<group>"; };
+		728A159E6ED1BE63FB57F4B307AE94C7 /* Pods-NPO Live-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NPO Live-resources.sh"; sourceTree = "<group>"; };
+		7A23FDA22E2391439869F27094C82DCD /* Pods-NPO Live.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NPO Live.debug.xcconfig"; sourceTree = "<group>"; };
+		7F2530BED96F26699408F73DE57C70C4 /* Pods-NPO Live.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NPO Live.modulemap"; sourceTree = "<group>"; };
+		83E17AF88EBB3F5362DA22AE6E1239EE /* Pods-NPO Live.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NPO Live.release.xcconfig"; sourceTree = "<group>"; };
+		83E81CB0BFB4792786CBC439C6BB7AEE /* Channel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		8E184A7CBDD11C7A10659350AEDCE81F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B27A84FCC66FE9800BDC7916D28CD787 /* Pods-NPO Live-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NPO Live-frameworks.sh"; sourceTree = "<group>"; };
+		C25858CAEFDB41C87B7A2A7A794D3F83 /* NPOStream.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NPOStream.xcconfig; sourceTree = "<group>"; };
+		CB2BE9D0A983E238B07537C940E0285A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF7787279D92351210013B5A4C40B809 /* NPOStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NPOStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D317FD5DF1BD8B53BD95F42197720C3E /* NPOStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NPOStream.h; sourceTree = "<group>"; };
+		DBE56826BE65B9534D08E06132CFC3D8 /* Pods_NPO_Live.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NPO_Live.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA400D06F324D57775FA3FBBB0CD6B35 /* ChannelProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChannelProvider.swift; sourceTree = "<group>"; };
+		F2C16169A2660EFF39BA03C675DAE51A /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		F90BDB49C28508949E5576C495C8066D /* Pods-NPO Live-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NPO Live-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13A86721E193B47CE6E3DEA90E98B56C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF32D9D60509AA4D621A05991686D96 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C6CCFBD50AF84E281EA37014FACBB70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E40CD5B52B0D130C6DF54A9881D4E4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E9D460C36CBB60EA7016B2FB4FBCEA0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F3091003DB4B523D3BE88E41B1C1441 /* Info.plist */,
+				3037F3B79361E15F339DAB38A00AC37A /* NPOStream.modulemap */,
+				C25858CAEFDB41C87B7A2A7A794D3F83 /* NPOStream.xcconfig */,
+				11E358063A6837B48DEFA3640D78D2CD /* NPOStream-dummy.m */,
+				0AFF127BC6B41F6BDF687F2DF66F9AD5 /* NPOStream-prefix.pch */,
+				2973EC69644A565F9FC9118ED6040F84 /* NPOStream-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../NPO-Live-Apple-TV-4-master/Pods/Target Support Files/NPOStream";
+			sourceTree = "<group>";
+		};
+		449507D5CAFFA8BB9EDF8F419AA7D51F /* Pods-NPO Live */ = {
+			isa = PBXGroup;
+			children = (
+				CB2BE9D0A983E238B07537C940E0285A /* Info.plist */,
+				7F2530BED96F26699408F73DE57C70C4 /* Pods-NPO Live.modulemap */,
+				09D919728AA602444061C933B2D76AA1 /* Pods-NPO Live-acknowledgements.markdown */,
+				F90BDB49C28508949E5576C495C8066D /* Pods-NPO Live-acknowledgements.plist */,
+				010D41F99D77EA189249A4B32BF1F06B /* Pods-NPO Live-dummy.m */,
+				B27A84FCC66FE9800BDC7916D28CD787 /* Pods-NPO Live-frameworks.sh */,
+				728A159E6ED1BE63FB57F4B307AE94C7 /* Pods-NPO Live-resources.sh */,
+				3C7311374E368D23C2E281A173A9A59C /* Pods-NPO Live-umbrella.h */,
+				7A23FDA22E2391439869F27094C82DCD /* Pods-NPO Live.debug.xcconfig */,
+				83E17AF88EBB3F5362DA22AE6E1239EE /* Pods-NPO Live.release.xcconfig */,
+			);
+			name = "Pods-NPO Live";
+			path = "Target Support Files/Pods-NPO Live";
+			sourceTree = "<group>";
+		};
+		694CC5F9ACF7109581BF54BE46227FE2 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0296D17529CE59D98A4CCE2B431BF93 /* NPOStream */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				694CC5F9ACF7109581BF54BE46227FE2 /* Development Pods */,
+				BB99B8D4C7329D10E7E4451B0A72C15A /* Frameworks */,
+				D3A8DD66B7E2B0F195A2444D85A38095 /* Products */,
+				B1695790C5092CADA61EDFDB789BCEEB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B1695790C5092CADA61EDFDB789BCEEB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				449507D5CAFFA8BB9EDF8F419AA7D51F /* Pods-NPO Live */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BB99B8D4C7329D10E7E4451B0A72C15A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDDF067583365F4DC4C3532BD6D66E2B /* tvOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDDF067583365F4DC4C3532BD6D66E2B /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				8E184A7CBDD11C7A10659350AEDCE81F /* Foundation.framework */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		D0296D17529CE59D98A4CCE2B431BF93 /* NPOStream */ = {
+			isa = PBXGroup;
+			children = (
+				DDA3CE34C9525FCEC40127366FBB8E02 /* NPOStream */,
+				3E9D460C36CBB60EA7016B2FB4FBCEA0 /* Support Files */,
+			);
+			name = NPOStream;
+			path = ../../NPOStream;
+			sourceTree = "<group>";
+		};
+		D3A8DD66B7E2B0F195A2444D85A38095 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF7787279D92351210013B5A4C40B809 /* NPOStream.framework */,
+				DBE56826BE65B9534D08E06132CFC3D8 /* Pods_NPO_Live.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDA3CE34C9525FCEC40127366FBB8E02 /* NPOStream */ = {
+			isa = PBXGroup;
+			children = (
+				83E81CB0BFB4792786CBC439C6BB7AEE /* Channel.swift */,
+				EA400D06F324D57775FA3FBBB0CD6B35 /* ChannelProvider.swift */,
+				225FDFE32ACFAECE50A4261348CC2D90 /* Info.plist */,
+				D317FD5DF1BD8B53BD95F42197720C3E /* NPOStream.h */,
+				0F1D951D6D93BEE47DC0E48EE99AC150 /* NPOStream.swift */,
+				F2C16169A2660EFF39BA03C675DAE51A /* String+Extension.swift */,
+			);
+			path = NPOStream;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6EA0EC3B4EA3D1919AE825CD0C251EB0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E31DBA4EAC520A6BA0CD12012FF42093 /* Pods-NPO Live-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9606A9E62899A0744060FA8EF997825D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED34DA4BF06D7F73FA1245EE86A33E1F /* NPOStream-umbrella.h in Headers */,
+				3545B63555D3C8C7AA34EDDFCED198A5 /* NPOStream.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3B288ADA1601E12AAE698B5569C8BAD6 /* Pods-NPO Live */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 833DAD0DDC74DCB9F32A3B1F85B93D8A /* Build configuration list for PBXNativeTarget "Pods-NPO Live" */;
+			buildPhases = (
+				2BDD2B29411F50818237134B48888BF2 /* Sources */,
+				13A86721E193B47CE6E3DEA90E98B56C /* Frameworks */,
+				6EA0EC3B4EA3D1919AE825CD0C251EB0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7BAFE32F408D77FD4050225037ED9DA /* PBXTargetDependency */,
+			);
+			name = "Pods-NPO Live";
+			productName = "Pods-NPO Live";
+			productReference = DBE56826BE65B9534D08E06132CFC3D8 /* Pods_NPO_Live.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6F94049D73DA249793CF4130B4F547C9 /* NPOStream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ACE0175C6A78C1FA6481793FF4D2A90 /* Build configuration list for PBXNativeTarget "NPOStream" */;
+			buildPhases = (
+				5B041155665A5D487F06C5F47B288086 /* Sources */,
+				7C6CCFBD50AF84E281EA37014FACBB70 /* Frameworks */,
+				9606A9E62899A0744060FA8EF997825D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NPOStream;
+			productName = NPOStream;
+			productReference = CF7787279D92351210013B5A4C40B809 /* NPOStream.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = D3A8DD66B7E2B0F195A2444D85A38095 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F94049D73DA249793CF4130B4F547C9 /* NPOStream */,
+				3B288ADA1601E12AAE698B5569C8BAD6 /* Pods-NPO Live */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BDD2B29411F50818237134B48888BF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				058F9364DFC635F78BF0C7D1594C6B0E /* Pods-NPO Live-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B041155665A5D487F06C5F47B288086 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED02C7075610F2160E3B111DAF00D07B /* Channel.swift in Sources */,
+				3856FBD287E818C48691278F999AE30E /* ChannelProvider.swift in Sources */,
+				A0FF97DF4EBD5C45B6C46576D5A46A23 /* Info.plist in Sources */,
+				85E86CFD559C8CB455DC06F618755162 /* NPOStream-dummy.m in Sources */,
+				69D34A9EFF08F3A2B9697B4ED84BD83B /* NPOStream.swift in Sources */,
+				32D35BEBF82870B41EF898533F18FD52 /* String+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7BAFE32F408D77FD4050225037ED9DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NPOStream;
+			target = 6F94049D73DA249793CF4130B4F547C9 /* NPOStream */;
+			targetProxy = 101FA608A86908BB356092114CD0FCD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		112B8ED2CAE21F51CB28A73DC9B5E78E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83E17AF88EBB3F5362DA22AE6E1239EE /* Pods-NPO Live.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NPO Live/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NPO Live/Pods-NPO Live.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NPO_Live;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1DD1CFF0DC5554065098F7DC1848365A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2AD07D44B9BDDE55CF2DA512218A6871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C25858CAEFDB41C87B7A2A7A794D3F83 /* NPOStream.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NPOStream/NPOStream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NPOStream/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NPOStream/NPOStream.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = NPOStream;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		31319F0CB942251CF15D3BB03C4EBAE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A23FDA22E2391439869F27094C82DCD /* Pods-NPO Live.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NPO Live/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NPO Live/Pods-NPO Live.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NPO_Live;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7DEE56CBFFC5EF063F24F486B02300EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		DCCB944114A82B6B8AAE86A9A3A48ACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C25858CAEFDB41C87B7A2A7A794D3F83 /* NPOStream.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NPOStream/NPOStream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NPOStream/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NPOStream/NPOStream.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = NPOStream;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0ACE0175C6A78C1FA6481793FF4D2A90 /* Build configuration list for PBXNativeTarget "NPOStream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCCB944114A82B6B8AAE86A9A3A48ACA /* Debug */,
+				2AD07D44B9BDDE55CF2DA512218A6871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DEE56CBFFC5EF063F24F486B02300EA /* Debug */,
+				1DD1CFF0DC5554065098F7DC1848365A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		833DAD0DDC74DCB9F32A3B1F85B93D8A /* Build configuration list for PBXNativeTarget "Pods-NPO Live" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31319F0CB942251CF15D3BB03C4EBAE7 /* Debug */,
+				112B8ED2CAE21F51CB28A73DC9B5E78E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
