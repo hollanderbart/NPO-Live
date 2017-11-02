@@ -13,7 +13,7 @@
 		511C0F551C06388D00B15BDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511C0F521C06388D00B15BDA /* Main.storyboard */; };
 		511C0F561C06388D00B15BDA /* BigChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511C0F531C06388D00B15BDA /* BigChannelCell.swift */; };
 		511C0F571C06388D00B15BDA /* SmallChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511C0F541C06388D00B15BDA /* SmallChannelCell.swift */; };
-		511C0F5A1C06389D00B15BDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511C0F581C06389D00B15BDA /* ViewController.swift */; };
+		511C0F5A1C06389D00B15BDA /* TVCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511C0F581C06389D00B15BDA /* TVCollection.swift */; };
 		511C0F5B1C06389D00B15BDA /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511C0F591C06389D00B15BDA /* PlayerViewController.swift */; };
 		511C0F5E1C0638A600B15BDA /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511C0F5C1C0638A600B15BDA /* String+Extension.swift */; };
 		511C0F5F1C0638A600B15BDA /* NSURL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511C0F5D1C0638A600B15BDA /* NSURL+Extension.swift */; };
@@ -28,7 +28,7 @@
 		511C0F521C06388D00B15BDA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		511C0F531C06388D00B15BDA /* BigChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigChannelCell.swift; sourceTree = "<group>"; };
 		511C0F541C06388D00B15BDA /* SmallChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallChannelCell.swift; sourceTree = "<group>"; };
-		511C0F581C06389D00B15BDA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		511C0F581C06389D00B15BDA /* TVCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVCollection.swift; sourceTree = "<group>"; };
 		511C0F591C06389D00B15BDA /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		511C0F5C1C0638A600B15BDA /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		511C0F5D1C0638A600B15BDA /* NSURL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Extension.swift"; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		511C0F4C1C06385900B15BDA /* Control */ = {
 			isa = PBXGroup;
 			children = (
-				511C0F581C06389D00B15BDA /* ViewController.swift */,
+				511C0F581C06389D00B15BDA /* TVCollection.swift */,
 				511C0F591C06389D00B15BDA /* PlayerViewController.swift */,
 			);
 			name = Control;
@@ -173,13 +173,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Maurice van Breukelen";
 				TargetAttributes = {
 					5123DB851C008A1A00F86B26 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = Z8Q4P9RU5D;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0910;
 					};
 				};
 			};
@@ -226,7 +226,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		45CF58D25F30D26B2E8F1576 /* [CP] Copy Pods Resources */ = {
@@ -267,7 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				511C0F5E1C0638A600B15BDA /* String+Extension.swift in Sources */,
-				511C0F5A1C06389D00B15BDA /* ViewController.swift in Sources */,
+				511C0F5A1C06389D00B15BDA /* TVCollection.swift in Sources */,
 				511C0F5F1C0638A600B15BDA /* NSURL+Extension.swift in Sources */,
 				511C0F501C06387700B15BDA /* AppDelegate.swift in Sources */,
 				511C0F571C06388D00B15BDA /* SmallChannelCell.swift in Sources */,
@@ -288,13 +288,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -333,13 +341,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -356,6 +372,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -375,10 +392,12 @@
 					"\"$(PROJECT_DIR)/NPO Live\"",
 				);
 				INFOPLIST_FILE = "NPO Live/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "bdh.NPO-Live";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -394,10 +413,12 @@
 					"\"$(PROJECT_DIR)/NPO Live\"",
 				);
 				INFOPLIST_FILE = "NPO Live/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "bdh.NPO-Live";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};

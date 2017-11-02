@@ -8,7 +8,7 @@
 
 import UIKit
 
-let gitHubURL = "https://api.github.com/repos/Mauricevb/NPO-Live-Apple-TV-4/releases"
+//let gitHubURL = "https://api.github.com/repos/Mauricevb/NPO-Live-Apple-TV-4/releases"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,11 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		checkForNewVersions()
+//        checkForNewVersions()
 		return true
 	}
 	
-	func checkForNewVersions() {
+//    func checkForNewVersions() {
 //		guard let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { return }
 //		
 //		let URL = Foundation.URL(string: gitHubURL)
@@ -54,5 +54,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //		}) 
 //		
 //		task.resume()
-	}
+//    }
 }

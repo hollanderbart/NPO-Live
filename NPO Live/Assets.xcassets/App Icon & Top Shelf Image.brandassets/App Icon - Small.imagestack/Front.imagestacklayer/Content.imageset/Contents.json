@@ -4,6 +4,10 @@
       "idiom" : "tv",
       "filename" : "npo.png",
       "scale" : "1x"
+    },
+    {
+      "idiom" : "tv",
+      "scale" : "2x"
     }
   ],
   "info" : {

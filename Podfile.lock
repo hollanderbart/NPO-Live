@@ -1,16 +1,16 @@
 PODS:
-  - NPOStream (0.0.5)
+  - NPOStream (0.0.6)
 
 DEPENDENCIES:
   - NPOStream (from `../NPOStream/`)
 
 EXTERNAL SOURCES:
   NPOStream:
-    :path: "../NPOStream/"
+    :path: ../NPOStream/
 
 SPEC CHECKSUMS:
-  NPOStream: c7b9f4a9ba4dd18351e29127baacc48e7846645e
+  NPOStream: 2421d98cf68c89d2e22413023f3ba45bc20f3331
 
 PODFILE CHECKSUM: 6f5845b39f165f24029830281b2f97933a1714c0
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1
