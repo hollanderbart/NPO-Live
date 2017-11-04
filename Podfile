@@ -8,5 +8,6 @@ target 'NPO Live' do
   use_frameworks!
 
   # Pods for NPO Live
-  pod "NPOStream", :path => "../NPOStream/"
+pod "NPOStream", "~> 0.0.6"
+
 end

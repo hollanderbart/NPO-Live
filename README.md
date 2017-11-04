@@ -2,15 +2,39 @@
 
 NPO Live is an unofficial Apple TV application for watching NPO channels live, as we think using Airplay is not just ‘good enough’. [Source](http://www.iculture.nl/nederlandse-apple-tv-apps-omroepen-tv-aanbieders/) (Dutch)
 
-Channels include NPO 1, NPO 2, NPO 3 and many more.
+The app focuses on the best user experience and to make it as easy as possible to see what is currently broadcasted on all the different channels. And by offering this, you don't have to go from channel to channel to determine what's the most interesting to watch.
+
+
+The following channels are available to watch.
+
+| Available NPO channels    |
+| ------------------------- |
+| NPO1                      |
+| NPO2                      |
+| NPO3                      |
+| NPONieuws                 |
+| NPOPolitiek               |
+| NPO101                    |
+| NPOCultura                |
+| NPOZappXtra               |
+| NPORadio1                 |
+| NPORadio2                 |
+| NPO3FM                    |
+| NPORadio4                 |
 
 ![Top Shelf](images/top_shelf.png)
-![Channels](images/channels.png)
 ![Playing](images/playing.png)
 
 ## Changelog
-v1.1: Design improvements, check for updates automatically, minor improvements   
-v1.0: Initial release.
+* v1.0.1: Build fixed
+* v1.0.0: Initial release
+
+## Next releases
+- Check for updates automatically
+- Active show per channel
+- While watching a channel, go directly to the next or previous channel
+- Subtitle support
+- Automatic refresh token after one hour of watching a show (known issue)
 
 ## Setup
 As this is an unofficial app, not available on the App Store, you will need to _sideload_ it onto your Apple TV. To do so, you can follow the steps below.
@@ -37,7 +61,7 @@ As this app is not publicly available on the App Store, you will have to manuall
 If you run into any problems with the app or have suggestions on how it can be inproved, please let us know. You can do so by [creating an issue](https://github.com/Mauricevb/NPO-Live-Apple-TV-4/issues).
 
 ### Authors
-[@Maurice_vB](https://twitter.com/Maurice_vB) & [@BasThomas](https://twitter.com/BasThomas).
+[@hollanderbart](https://twitter.com/hollanderbart)
 
 ### License
 MIT

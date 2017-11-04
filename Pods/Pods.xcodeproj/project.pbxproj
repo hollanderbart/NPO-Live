@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054E81A7622FCA78DB86CEB5D8668508 /* NPOStream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 770BC37684DCF7BFCBD0FDEB139812DC /* NPOStream-dummy.m */; };
 		058F9364DFC635F78BF0C7D1594C6B0E /* Pods-NPO Live-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D41F99D77EA189249A4B32BF1F06B /* Pods-NPO Live-dummy.m */; };
-		3BA1C83C53184FFDFBB7F0908C865681 /* NPOStreamError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBECD05544CEDB1927F11261C43F970 /* NPOStreamError.swift */; };
-		49041014FC87DAD8DAF925942E7BA22B /* NPOStream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E75F5DE8CE434B79A12484DD3986865A /* NPOStream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4FCCB4F62F86C0A52C19DED82D038726 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 9459DA9BB8E532AA27DFE5B6A558A43E /* Info.plist */; };
-		7714BBF07F9F752AB98FD682F93BB09B /* NPOStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 764949F6BFB9CC132D45D15074B528DD /* NPOStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C6A1F36224A566EF62D198C9B2D63C5 /* NPOStream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4546100FA574E2A18C9C910240F03459 /* NPOStream-dummy.m */; };
-		C5EBD426F1374666DF3DCCA93D4FB982 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFBBC64E08E498E0D9669CCA9C199F5 /* Channel.swift */; };
-		CCF982F1255A67CA13E7486929812A41 /* ChannelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4431C1DA56935E679899864F2AF48280 /* ChannelProvider.swift */; };
+		099985D50A97396B3A154D1E966EC2AD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DF77B6B4D332447B92D42944ECC8BF /* String+Extension.swift */; };
+		1FA6B7A2075FAD3BD6BF7C0DC71F02DC /* NPOStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246A65FEB59B2BA785C7BD22C0E59CF /* NPOStream.swift */; };
+		36E7285A7F0A358C2CBB246C79CD30BB /* ChannelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74957A360B0FE060ACFE0ABEAFAE077C /* ChannelProvider.swift */; };
+		5EC04D6997B4EDF65A41B11734A0880C /* NPOStreamError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F83EFEBFEFA12975B265D5E70B4E027 /* NPOStreamError.swift */; };
+		772BEB85349E4BB7AB3D9724719CDE93 /* NPOStream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FC2CFFF599523188C28057572D17DA1 /* NPOStream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FE52A34FD25EED5ADD0CBAE4D32C01E /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7485DDF6D50940EED133A7B7B4822 /* Channel.swift */; };
+		925ABBE00079F385D6056AE48BC1D693 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5AF7784414C413769C4AD43A8E0E5 /* Result.swift */; };
+		A3F45740773E42F8B34D22F45585D67D /* NPOStream.h in Headers */ = {isa = PBXBuildFile; fileRef = B2C8A824A2FBB8FBDDAAF2039A40F01D /* NPOStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A983AB77056DFF54539ECA46330EC984 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 6A9B3E1C525B85F95B08E31856485930 /* Info.plist */; };
 		CEB69C43D71DDB142BCB13B9F262C6D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D63B397DD7C2A0B6C4DAADFD5B12F1 /* Foundation.framework */; };
 		E31DBA4EAC520A6BA0CD12012FF42093 /* Pods-NPO Live-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C7311374E368D23C2E281A173A9A59C /* Pods-NPO Live-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4873C0F1D2804C431B0D3C272C31D08 /* NPOStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B3B353C0548F1141BCB079CC6AC33 /* NPOStream.swift */; };
-		F6F1ABF0AE40B521F25461A52ED10D30 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764A6C1146C5DFAFC3AFC731BA20AD2 /* Result.swift */; };
 		FB0D74AB85D8E06A076E820A7F767760 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D63B397DD7C2A0B6C4DAADFD5B12F1 /* Foundation.framework */; };
-		FFB250DC0E7C4A8DF776253F9A457A8A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801755AB6CE98DFA387BD12C5CF6ACDD /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,31 +36,31 @@
 /* Begin PBXFileReference section */
 		010D41F99D77EA189249A4B32BF1F06B /* Pods-NPO Live-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NPO Live-dummy.m"; sourceTree = "<group>"; };
 		09D919728AA602444061C933B2D76AA1 /* Pods-NPO Live-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NPO Live-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0FC5AF7784414C413769C4AD43A8E0E5 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = NPOStream/Result.swift; sourceTree = "<group>"; };
 		17D63B397DD7C2A0B6C4DAADFD5B12F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		2623DA6FD2E6B90930B27A5058C6D541 /* NPOStream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NPOStream.modulemap; sourceTree = "<group>"; };
-		3ACE5DE36DCBDB6E63682F1B86BA70B7 /* NPOStream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NPOStream-prefix.pch"; sourceTree = "<group>"; };
 		3C7311374E368D23C2E281A173A9A59C /* Pods-NPO Live-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NPO Live-umbrella.h"; sourceTree = "<group>"; };
-		4431C1DA56935E679899864F2AF48280 /* ChannelProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChannelProvider.swift; sourceTree = "<group>"; };
-		4546100FA574E2A18C9C910240F03459 /* NPOStream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NPOStream-dummy.m"; sourceTree = "<group>"; };
-		542B3B353C0548F1141BCB079CC6AC33 /* NPOStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NPOStream.swift; sourceTree = "<group>"; };
+		3F83EFEBFEFA12975B265D5E70B4E027 /* NPOStreamError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NPOStreamError.swift; path = NPOStream/NPOStreamError.swift; sourceTree = "<group>"; };
+		4EE7485DDF6D50940EED133A7B7B4822 /* Channel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = NPOStream/Channel.swift; sourceTree = "<group>"; };
+		57DF77B6B4D332447B92D42944ECC8BF /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "NPOStream/String+Extension.swift"; sourceTree = "<group>"; };
+		64393ECA494C01E982A75DEC77F53995 /* NPOStream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NPOStream-prefix.pch"; sourceTree = "<group>"; };
+		6A9B3E1C525B85F95B08E31856485930 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = NPOStream/Info.plist; sourceTree = "<group>"; };
 		728A159E6ED1BE63FB57F4B307AE94C7 /* Pods-NPO Live-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NPO Live-resources.sh"; sourceTree = "<group>"; };
-		764949F6BFB9CC132D45D15074B528DD /* NPOStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NPOStream.h; sourceTree = "<group>"; };
+		74957A360B0FE060ACFE0ABEAFAE077C /* ChannelProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChannelProvider.swift; path = NPOStream/ChannelProvider.swift; sourceTree = "<group>"; };
+		770BC37684DCF7BFCBD0FDEB139812DC /* NPOStream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NPOStream-dummy.m"; sourceTree = "<group>"; };
 		7A23FDA22E2391439869F27094C82DCD /* Pods-NPO Live.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NPO Live.debug.xcconfig"; sourceTree = "<group>"; };
-		7BBECD05544CEDB1927F11261C43F970 /* NPOStreamError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NPOStreamError.swift; sourceTree = "<group>"; };
-		7F2530BED96F26699408F73DE57C70C4 /* Pods-NPO Live.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NPO Live.modulemap"; sourceTree = "<group>"; };
-		801755AB6CE98DFA387BD12C5CF6ACDD /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		7F2530BED96F26699408F73DE57C70C4 /* Pods-NPO Live.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NPO Live.modulemap"; sourceTree = "<group>"; };
+		7FC2CFFF599523188C28057572D17DA1 /* NPOStream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NPOStream-umbrella.h"; sourceTree = "<group>"; };
 		83E17AF88EBB3F5362DA22AE6E1239EE /* Pods-NPO Live.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NPO Live.release.xcconfig"; sourceTree = "<group>"; };
-		897FF767F5BCFA7BFA63FAA8BAFE01B7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9459DA9BB8E532AA27DFE5B6A558A43E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FFCACDEF00B97EE44A134DA21F853A5 /* NPOStream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NPOStream.modulemap; sourceTree = "<group>"; };
+		AF4A70FD0C5AED6EF53D84B74661C2E4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B246A65FEB59B2BA785C7BD22C0E59CF /* NPOStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NPOStream.swift; path = NPOStream/NPOStream.swift; sourceTree = "<group>"; };
 		B27A84FCC66FE9800BDC7916D28CD787 /* Pods-NPO Live-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NPO Live-frameworks.sh"; sourceTree = "<group>"; };
+		B2C8A824A2FBB8FBDDAAF2039A40F01D /* NPOStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NPOStream.h; path = NPOStream/NPOStream.h; sourceTree = "<group>"; };
+		B8BC59BD9268C4CB30F0D4518A786D61 /* NPOStream.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NPOStream.xcconfig; sourceTree = "<group>"; };
 		CB2BE9D0A983E238B07537C940E0285A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBBF675C7E08B9C5C72947A4B2CF1FCD /* NPOStream.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NPOStream.xcconfig; sourceTree = "<group>"; };
-		CDFBBC64E08E498E0D9669CCA9C199F5 /* Channel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
-		CF7787279D92351210013B5A4C40B809 /* NPOStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NPOStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBE56826BE65B9534D08E06132CFC3D8 /* Pods_NPO_Live.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NPO_Live.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E75F5DE8CE434B79A12484DD3986865A /* NPOStream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NPOStream-umbrella.h"; sourceTree = "<group>"; };
-		E764A6C1146C5DFAFC3AFC731BA20AD2 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		CF7787279D92351210013B5A4C40B809 /* NPOStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NPOStream.framework; path = NPOStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBE56826BE65B9534D08E06132CFC3D8 /* Pods_NPO_Live.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NPO_Live.framework; path = "Pods-NPO Live.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F90BDB49C28508949E5576C495C8066D /* Pods-NPO Live-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NPO Live-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		137E04F86F5F1B969C50C810615FAE7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65CDA560CAAD133E29813A3EE69B1BD8 /* NPOStream */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		449507D5CAFFA8BB9EDF8F419AA7D51F /* Pods-NPO Live */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,33 +110,46 @@
 			path = "Target Support Files/Pods-NPO Live";
 			sourceTree = "<group>";
 		};
-		694CC5F9ACF7109581BF54BE46227FE2 /* Development Pods */ = {
+		65CDA560CAAD133E29813A3EE69B1BD8 /* NPOStream */ = {
 			isa = PBXGroup;
 			children = (
-				7B3959DE2E523522F39BF6386C691FAD /* NPOStream */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		7B3959DE2E523522F39BF6386C691FAD /* NPOStream */ = {
-			isa = PBXGroup;
-			children = (
-				FD258614853332E44E4FD728E1F1E1F9 /* NPOStream */,
-				E4278AE4B000436F59991FD6B16F4ADC /* Support Files */,
+				4EE7485DDF6D50940EED133A7B7B4822 /* Channel.swift */,
+				74957A360B0FE060ACFE0ABEAFAE077C /* ChannelProvider.swift */,
+				6A9B3E1C525B85F95B08E31856485930 /* Info.plist */,
+				B2C8A824A2FBB8FBDDAAF2039A40F01D /* NPOStream.h */,
+				B246A65FEB59B2BA785C7BD22C0E59CF /* NPOStream.swift */,
+				3F83EFEBFEFA12975B265D5E70B4E027 /* NPOStreamError.swift */,
+				0FC5AF7784414C413769C4AD43A8E0E5 /* Result.swift */,
+				57DF77B6B4D332447B92D42944ECC8BF /* String+Extension.swift */,
+				86BD84B13F05E5FC9BB71BEE13224EAF /* Support Files */,
 			);
 			name = NPOStream;
-			path = ../../NPOStream;
+			path = NPOStream;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				694CC5F9ACF7109581BF54BE46227FE2 /* Development Pods */,
 				BB99B8D4C7329D10E7E4451B0A72C15A /* Frameworks */,
+				137E04F86F5F1B969C50C810615FAE7F /* Pods */,
 				D3A8DD66B7E2B0F195A2444D85A38095 /* Products */,
 				B1695790C5092CADA61EDFDB789BCEEB /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		86BD84B13F05E5FC9BB71BEE13224EAF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF4A70FD0C5AED6EF53D84B74661C2E4 /* Info.plist */,
+				9FFCACDEF00B97EE44A134DA21F853A5 /* NPOStream.modulemap */,
+				B8BC59BD9268C4CB30F0D4518A786D61 /* NPOStream.xcconfig */,
+				770BC37684DCF7BFCBD0FDEB139812DC /* NPOStream-dummy.m */,
+				64393ECA494C01E982A75DEC77F53995 /* NPOStream-prefix.pch */,
+				7FC2CFFF599523188C28057572D17DA1 /* NPOStream-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NPOStream";
 			sourceTree = "<group>";
 		};
 		ACB6F43550E213F0570FA1E541F56EE8 /* tvOS */ = {
@@ -164,52 +185,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E4278AE4B000436F59991FD6B16F4ADC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				897FF767F5BCFA7BFA63FAA8BAFE01B7 /* Info.plist */,
-				2623DA6FD2E6B90930B27A5058C6D541 /* NPOStream.modulemap */,
-				CBBF675C7E08B9C5C72947A4B2CF1FCD /* NPOStream.xcconfig */,
-				4546100FA574E2A18C9C910240F03459 /* NPOStream-dummy.m */,
-				3ACE5DE36DCBDB6E63682F1B86BA70B7 /* NPOStream-prefix.pch */,
-				E75F5DE8CE434B79A12484DD3986865A /* NPOStream-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../NPO-Live-Apple-TV-4-master/Pods/Target Support Files/NPOStream";
-			sourceTree = "<group>";
-		};
-		FD258614853332E44E4FD728E1F1E1F9 /* NPOStream */ = {
-			isa = PBXGroup;
-			children = (
-				CDFBBC64E08E498E0D9669CCA9C199F5 /* Channel.swift */,
-				4431C1DA56935E679899864F2AF48280 /* ChannelProvider.swift */,
-				9459DA9BB8E532AA27DFE5B6A558A43E /* Info.plist */,
-				764949F6BFB9CC132D45D15074B528DD /* NPOStream.h */,
-				542B3B353C0548F1141BCB079CC6AC33 /* NPOStream.swift */,
-				7BBECD05544CEDB1927F11261C43F970 /* NPOStreamError.swift */,
-				E764A6C1146C5DFAFC3AFC731BA20AD2 /* Result.swift */,
-				801755AB6CE98DFA387BD12C5CF6ACDD /* String+Extension.swift */,
-			);
-			path = NPOStream;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3D4DE6B749E4BD282127CFE6A9AFA1D2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				49041014FC87DAD8DAF925942E7BA22B /* NPOStream-umbrella.h in Headers */,
-				7714BBF07F9F752AB98FD682F93BB09B /* NPOStream.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6EA0EC3B4EA3D1919AE825CD0C251EB0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E31DBA4EAC520A6BA0CD12012FF42093 /* Pods-NPO Live-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFDF9F6B2B4E2BBE35A1009D270E23EF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				772BEB85349E4BB7AB3D9724719CDE93 /* NPOStream-umbrella.h in Headers */,
+				A3F45740773E42F8B34D22F45585D67D /* NPOStream.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,9 +230,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFC0BD26E0289525BA235348B2A477EC /* Build configuration list for PBXNativeTarget "NPOStream" */;
 			buildPhases = (
-				9D7F4C288B88008A9C6E4AC8D0710035 /* Sources */,
+				6145CCB1D753049758D1A63751BB48F2 /* Sources */,
 				4DB23567CA86F74695E16DB084660387 /* Frameworks */,
-				3D4DE6B749E4BD282127CFE6A9AFA1D2 /* Headers */,
+				DFDF9F6B2B4E2BBE35A1009D270E23EF /* Headers */,
 			);
 			buildRules = (
 			);
@@ -258,7 +250,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -287,18 +279,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9D7F4C288B88008A9C6E4AC8D0710035 /* Sources */ = {
+		6145CCB1D753049758D1A63751BB48F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5EBD426F1374666DF3DCCA93D4FB982 /* Channel.swift in Sources */,
-				CCF982F1255A67CA13E7486929812A41 /* ChannelProvider.swift in Sources */,
-				4FCCB4F62F86C0A52C19DED82D038726 /* Info.plist in Sources */,
-				7C6A1F36224A566EF62D198C9B2D63C5 /* NPOStream-dummy.m in Sources */,
-				F4873C0F1D2804C431B0D3C272C31D08 /* NPOStream.swift in Sources */,
-				3BA1C83C53184FFDFBB7F0908C865681 /* NPOStreamError.swift in Sources */,
-				F6F1ABF0AE40B521F25461A52ED10D30 /* Result.swift in Sources */,
-				FFB250DC0E7C4A8DF776253F9A457A8A /* String+Extension.swift in Sources */,
+				8FE52A34FD25EED5ADD0CBAE4D32C01E /* Channel.swift in Sources */,
+				36E7285A7F0A358C2CBB246C79CD30BB /* ChannelProvider.swift in Sources */,
+				A983AB77056DFF54539ECA46330EC984 /* Info.plist in Sources */,
+				054E81A7622FCA78DB86CEB5D8668508 /* NPOStream-dummy.m in Sources */,
+				1FA6B7A2075FAD3BD6BF7C0DC71F02DC /* NPOStream.swift in Sources */,
+				5EC04D6997B4EDF65A41B11734A0880C /* NPOStreamError.swift in Sources */,
+				925ABBE00079F385D6056AE48BC1D693 /* Result.swift in Sources */,
+				099985D50A97396B3A154D1E966EC2AD /* String+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,9 +354,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -372,21 +362,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -410,7 +394,7 @@
 		};
 		779C0DAFF83F39414081A7779FD67066 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBBF675C7E08B9C5C72947A4B2CF1FCD /* NPOStream.xcconfig */;
+			baseConfigurationReference = B8BC59BD9268C4CB30F0D4518A786D61 /* NPOStream.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -492,9 +476,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -502,20 +484,14 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -536,7 +512,7 @@
 		};
 		B958F1464680B3B4F8AD07F11114895E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBBF675C7E08B9C5C72947A4B2CF1FCD /* NPOStream.xcconfig */;
+			baseConfigurationReference = B8BC59BD9268C4CB30F0D4518A786D61 /* NPOStream.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

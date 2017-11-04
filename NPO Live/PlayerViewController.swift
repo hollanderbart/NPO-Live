@@ -25,14 +25,17 @@ class PlayerViewController: AVPlayerViewController {
         
         playerItem.externalMetadata.append(titleMetadataItem)
         
-        if let image = UIImage(named: channel.title) {
+        if
+            let image = UIImage(named: channel.title) {
             let logo: AVMetadataItem = {
                 let _logo = AVMutableMetadataItem()
                 _logo.locale = Locale.current
                 _logo.key = AVMetadataKey.commonKeyArtwork as NSCopying & NSObjectProtocol
                 _logo.keySpace = AVMetadataKeySpace.common
-                _logo.value = UIImagePNGRepresentation(image) as? NSCopying & NSObjectProtocol
-                
+                if let imagePNG = UIImagePNGRepresentation(image) {
+                    _logo.value = imagePNG as NSCopying & NSObjectProtocol
+                }
+
                 return _logo
             }()
             
