@@ -31,7 +31,8 @@ The following channels are available to watch.
 
 ## Next releases
 - Check for updates automatically
-- Active show per channel
+- Active show information per channel
+- Support for light / dark theme
 - While watching a channel, go directly to the next or previous channel
 - Subtitle support
 - Automatic refresh token after one hour of watching a show (known issue)
@@ -47,7 +48,7 @@ As this is an unofficial app, not available on the App Store, you will need to _
 **A USB Type C cable** to connect Apple TV to your computer.
 
 1. Download the app by clicking _Download ZIP_ on GitHub.
-2. Open `NPO Live.xcodeproj` from the download. This will open the app in Xcode.
+2. Open `NPO Live.xcworkspace` from the download. This will open the app in Xcode.
 3. Connect Apple TV to your computer.
 4. Click on the project in the navigator on the left.
 5. Alter the `Bundle Identifier` to include something unique, like your name.
