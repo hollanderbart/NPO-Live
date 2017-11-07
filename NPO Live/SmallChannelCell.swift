@@ -12,16 +12,17 @@ import NPOStream
 import AVKit
 
 class SmallChannelCell: UICollectionViewCell {
-	
+
 	@IBOutlet weak var logoView: UIImageView!
 
-    var player: AVPlayer!
-    //    var playerLayer: AVPlayerLayer!
-    var playerController: AVPlayerViewController!
-    
+    let player = AVPlayer()
+    let playerController = AVPlayerViewController()
+    static let identifier: String = "SmallChannelCell"
+
 	var channel: Channel? {
 		didSet {
 			setupCell()
+            addPlayer(channel?.url)
 		}
 	}
 	
@@ -34,31 +35,14 @@ class SmallChannelCell: UICollectionViewCell {
         logoView.adjustsImageWhenAncestorFocused = true
         logoView.layer.cornerRadius = 10
         logoView.layer.masksToBounds = true
-
-        if channel.url == nil {
-            NPOStream.getStream(channel.streamTitle) { (result) in
-                switch result {
-                case .error(let error):
-                    print(error.localizedDescription)
-                case .success(let streamUrl):
-                    channel.url = streamUrl
-                    self.addPlayer(streamUrl)
-                }
-            }
-        }
 	}
     
-    func addPlayer(_ url: URL) {
-        player = AVPlayer(url: url)
+    func addPlayer(_ url: URL?) {
+        guard let url = url else { return }
+        player.replaceCurrentItem(with: AVPlayerItem(url: url))
         player.volume = 0
-        playerController = AVPlayerViewController()
         playerController.player = player
-        
         playerController.view.frame = logoView.frame
-
-        self.logoView.overlayContentView.addSubview(playerController.view)
-        
-        player.play()
+        logoView.overlayContentView.addSubview(playerController.view)
     }
 }
-

@@ -11,19 +11,19 @@ import NPOStream
 import AVKit
 
 class BigChannelCell: UICollectionViewCell {
-	
+
 	@IBOutlet weak var logoView: UIImageView!
     @IBOutlet weak var tinyLogoView: UIImageView!
     @IBOutlet weak var label: UILabel!
-	@IBOutlet weak var labelBottomConstraint: NSLayoutConstraint!
     
-    var player: AVPlayer!
-//    var playerLayer: AVPlayerLayer!
-    var playerController: AVPlayerViewController!
-    
+    let player = AVPlayer()
+    let playerController = AVPlayerViewController()
+    static let identifier: String = "BigChannelCell"
+
 	var channel: Channel? {
 		didSet {
 			setupCell()
+            addPlayer(channel?.url)
 		}
 	}
     
@@ -38,43 +38,15 @@ class BigChannelCell: UICollectionViewCell {
         logoView.adjustsImageWhenAncestorFocused = true
         logoView.layer.cornerRadius = 10
         logoView.layer.masksToBounds = true
-        
         label.text = ""
-
-        if channel.url == nil {
-            NPOStream.getStream(channel.streamTitle) { (result) in
-                switch result {
-                case .error(let error):
-                    print(error.localizedDescription)
-                case .success(let streamUrl):
-                    channel.url = streamUrl
-                    self.addPlayer(streamUrl)
-                }
-            }
-        }
 	}
 
-//    func convertImageToBW(image:UIImage) -> UIImage {
-//
-//        let filter = CIFilter(name: "CIPhotoEffectMono")
-//
-//        let ciInput = CIImage(image: image)
-//        filter?.setValue(ciInput, forKey: "inputImage")
-//
-//        let ciOutput = filter?.outputImage
-//        let ciContext = CIContext()
-//        let cgImage = ciContext.createCGImage(ciOutput!, from: (ciOutput?.extent)!)
-//
-//        return UIImage(cgImage: cgImage!)
-//    }
-
-    func addPlayer(_ url: URL) {
-        player = AVPlayer(url: url)
+    func addPlayer(_ url: URL?) {
+        guard let url = url else { return }
+        player.replaceCurrentItem(with: AVPlayerItem(url: url))
         player.volume = 0
-        playerController = AVPlayerViewController()
         playerController.player = player
         playerController.view.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: logoView.frame.size) 
         logoView.overlayContentView.addSubview(playerController.view)
-        player.play()
     }
 }
