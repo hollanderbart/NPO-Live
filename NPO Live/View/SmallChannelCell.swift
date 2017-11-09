@@ -31,7 +31,7 @@ class SmallChannelCell: UICollectionViewCell {
             let channel = channel,
             let image = UIImage(named: channel.title) else { return }
         logoView.image = image
-        logoView.center = contentView.center
+        logoView.contentMode = .scaleAspectFill
         logoView.adjustsImageWhenAncestorFocused = true
         logoView.layer.cornerRadius = 10
         logoView.layer.masksToBounds = true

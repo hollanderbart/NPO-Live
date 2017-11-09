@@ -25,14 +25,10 @@ The following channels are available to watch.
 ![Top Shelf](images/top_shelf.png)
 ![Playing](images/playing.png)
 
-## Changelog
-* v1.0.1: Build fixed
-* v1.0.0: Initial release
-
 ## Next releases
-- Check for updates automatically
+- ~~Check for updates automatically~~
 - Active show information per channel
-- Support for light / dark theme
+- ~~Support for light / dark theme~~
 - While watching a channel, go directly to the next or previous channel
 - Subtitle support
 - Automatic refresh token after one hour of watching a show (known issue)

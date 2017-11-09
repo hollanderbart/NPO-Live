@@ -15,7 +15,7 @@
 		511C0F571C06388D00B15BDA /* SmallChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511C0F541C06388D00B15BDA /* SmallChannelCell.swift */; };
 		511C0F5A1C06389D00B15BDA /* TVCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511C0F581C06389D00B15BDA /* TVCollectionViewController.swift */; };
 		511C0F5B1C06389D00B15BDA /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511C0F591C06389D00B15BDA /* PlayerViewController.swift */; };
-		93026D061FB258E000BC01F8 /* ChannelStreamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93026D051FB258E000BC01F8 /* ChannelStreamController.swift */; };
+		932C01991FB34EDD0028D251 /* VersionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C01981FB34EDD0028D251 /* VersionUtility.swift */; };
 		93AF11B91F18BA05005043DB /* Pods_NPO_Live.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF4D1674025305B1531E95D /* Pods_NPO_Live.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,7 @@
 		511C0F591C06389D00B15BDA /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		5123DB861C008A1A00F86B26 /* NPO Live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NPO Live.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5123DB921C008A1A00F86B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93026D051FB258E000BC01F8 /* ChannelStreamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelStreamController.swift; sourceTree = "<group>"; };
+		932C01981FB34EDD0028D251 /* VersionUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionUtility.swift; sourceTree = "<group>"; };
 		98E26ADFA6C6F60733EC205D /* Pods-NPO Live.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPO Live.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NPO Live/Pods-NPO Live.debug.xcconfig"; sourceTree = "<group>"; };
 		DAF4D1674025305B1531E95D /* Pods_NPO_Live.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NPO_Live.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -48,44 +48,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		49F08DDD1C00ED2E00AF0C36 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				511C0F4E1C06387700B15BDA /* AppDelegate.swift */,
-				511C0F4F1C06387700B15BDA /* Assets.xcassets */,
-				511C0F521C06388D00B15BDA /* Main.storyboard */,
-				5123DB921C008A1A00F86B26 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		511C0F4A1C06384C00B15BDA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				511C0F471C06384900B15BDA /* ChannelProvider.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		511C0F4B1C06385500B15BDA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				511C0F531C06388D00B15BDA /* BigChannelCell.swift */,
-				511C0F541C06388D00B15BDA /* SmallChannelCell.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		511C0F4C1C06385900B15BDA /* Control */ = {
-			isa = PBXGroup;
-			children = (
-				93026D051FB258E000BC01F8 /* ChannelStreamController.swift */,
-				511C0F581C06389D00B15BDA /* TVCollectionViewController.swift */,
-				511C0F591C06389D00B15BDA /* PlayerViewController.swift */,
-			);
-			name = Control;
-			sourceTree = "<group>";
-		};
 		5123DB7D1C008A1A00F86B26 = {
 			isa = PBXGroup;
 			children = (
@@ -107,10 +69,10 @@
 		5123DB881C008A1A00F86B26 /* NPO Live */ = {
 			isa = PBXGroup;
 			children = (
-				511C0F4A1C06384C00B15BDA /* Model */,
-				511C0F4B1C06385500B15BDA /* View */,
-				511C0F4C1C06385900B15BDA /* Control */,
-				49F08DDD1C00ED2E00AF0C36 /* Supporting Files */,
+				932FC16A1FB4454E00FDACBF /* Control */,
+				932FC1681FB4453500FDACBF /* Model */,
+				932FC1691FB4453F00FDACBF /* View */,
+				932FC16B1FB4458600FDACBF /* Supporting Files */,
 			);
 			path = "NPO Live";
 			sourceTree = "<group>";
@@ -122,6 +84,44 @@
 				4D473A8CFCE3B5A086B71258 /* Pods-NPO Live.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		932FC1681FB4453500FDACBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				511C0F471C06384900B15BDA /* ChannelProvider.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		932FC1691FB4453F00FDACBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				511C0F531C06388D00B15BDA /* BigChannelCell.swift */,
+				511C0F541C06388D00B15BDA /* SmallChannelCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		932FC16A1FB4454E00FDACBF /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				511C0F581C06389D00B15BDA /* TVCollectionViewController.swift */,
+				511C0F591C06389D00B15BDA /* PlayerViewController.swift */,
+				932C01981FB34EDD0028D251 /* VersionUtility.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		932FC16B1FB4458600FDACBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				511C0F4E1C06387700B15BDA /* AppDelegate.swift */,
+				511C0F4F1C06387700B15BDA /* Assets.xcassets */,
+				511C0F521C06388D00B15BDA /* Main.storyboard */,
+				5123DB921C008A1A00F86B26 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		947374420EE0AC472B9668D5 /* Frameworks */ = {
@@ -257,10 +257,10 @@
 			files = (
 				511C0F5A1C06389D00B15BDA /* TVCollectionViewController.swift in Sources */,
 				511C0F501C06387700B15BDA /* AppDelegate.swift in Sources */,
-				93026D061FB258E000BC01F8 /* ChannelStreamController.swift in Sources */,
 				511C0F571C06388D00B15BDA /* SmallChannelCell.swift in Sources */,
 				511C0F5B1C06389D00B15BDA /* PlayerViewController.swift in Sources */,
 				511C0F491C06384900B15BDA /* ChannelProvider.swift in Sources */,
+				932C01991FB34EDD0028D251 /* VersionUtility.swift in Sources */,
 				511C0F561C06388D00B15BDA /* BigChannelCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,7 +379,7 @@
 					"$(inherited)",
 					"\"$(PROJECT_DIR)/NPO Live\"",
 				);
-				INFOPLIST_FILE = "NPO Live/Info.plist";
+				INFOPLIST_FILE = "NPO Live/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "bdh.NPO-Live";
@@ -400,7 +400,7 @@
 					"$(inherited)",
 					"\"$(PROJECT_DIR)/NPO Live\"",
 				);
-				INFOPLIST_FILE = "NPO Live/Info.plist";
+				INFOPLIST_FILE = "NPO Live/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "bdh.NPO-Live";
