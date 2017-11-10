@@ -1,5 +1,15 @@
 # NPO Live
 
+<p align="center">
+    <a href="https://dashboard.buddybuild.com/apps/5a05b9c7d56f1900012d82d3/build/latest?branch=master">
+        <img src="https://dashboard.buddybuild.com/api/statusImage?appID=5a05b9c7d56f1900012d82d3&branch=master&build=latest" />
+    </a>
+    <img src="https://img.shields.io/badge/Swift-4.0-orange.svg" />
+    <a href="https://twitter.com/hollanderbart">
+        <img src="https://img.shields.io/badge/contact-@hollanderbart-blue.svg?style=flat" alt="Twitter: @hollanderbart"/>
+    </a>
+</p>                                                                                                               
+                                                                                                                        
 NPO Live is an unofficial Apple TV application for watching NPO channels live, as we think using Airplay is not just ‘good enough’. [Source](http://www.iculture.nl/nederlandse-apple-tv-apps-omroepen-tv-aanbieders/) (Dutch)
 
 The app focuses on the best user experience and to make it as easy as possible to see what is currently broadcasted on all the different channels. And by offering this, you don't have to go from channel to channel to determine what's the most interesting to watch.
@@ -52,10 +62,10 @@ As this is an unofficial app, not available on the App Store, you will need to _
 7. Press the play button (or `⌘+R`) to install the app on Apple TV. If any popups appear, chose the developer account you set up as the `Development Team` to use and follow the steps.
 
 ### Updates
-As this app is not publicly available on the App Store, you will have to manually update. To do so, follow the steps at _[Setup](#setup)_. You can check [the changelog](#changelog) to see if you are running an older version of the app.
+As this app is not publicly available on the App Store, you will have to manually update. To do so, follow the steps at _[Setup](#setup)_.
 
 ### Help
-If you run into any problems with the app or have suggestions on how it can be inproved, please let us know. You can do so by [creating an issue](https://github.com/Mauricevb/NPO-Live-Apple-TV-4/issues).
+If you run into any problems with the app or have suggestions on how it can be inproved, please let us know. You can do so by [creating an issue](https://github.com/hollanderbart/NPO-Live/issues).
 
 ### Authors
 [@hollanderbart](https://twitter.com/hollanderbart)
