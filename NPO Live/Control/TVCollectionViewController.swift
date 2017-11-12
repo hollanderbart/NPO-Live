@@ -120,6 +120,26 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
                             self?.topCollectionView.reloadItems(at: [IndexPath(row: 1, section: 0)])
                         } else if channel.title == "NPO 3" {
                             self?.topCollectionView.reloadItems(at: [IndexPath(row: 2, section: 0)])
+                        } else if channel.title == "NPO Nieuws" {
+                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 0, section: 0)])
+                        } else if channel.title == "NPO Politiek" {
+                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 1, section: 0)])
+                        } else if channel.title == "NPO 101" {
+                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 2, section: 0)])
+                        } else if channel.title == "NPO Cultura" {
+                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 3, section: 0)])
+                        } else if channel.title == "NPO Zapp" {
+                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 4, section: 0)])
+                        } else if channel.title == "NPO Radio 1" {
+                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 5, section: 0)])
+                        } else if channel.title == "NPO Radio 2" {
+                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 6, section: 0)])
+                        } else if channel.title == "NPO 3FM" {
+                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 7, section: 0)])
+                        } else if channel.title == "NPO Radio 4" {
+                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 8, section: 0)])
+                        } else if channel.title == "NPO FunX" {
+                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 9, section: 0)])
                         }
                     }
                 }

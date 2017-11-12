@@ -45,8 +45,8 @@ class BigChannelCell: UICollectionViewCell {
         player.volume = 0
         playerController.player = player
         playerController.view.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: liveTile.frame.size)
-        liveTile.overlayContentView.addSubview(playerController.view)
         liveTile.alpha = 1
+        liveTile.overlayContentView.addSubview(playerController.view)
         tinyLogoView.isHidden = false
         logoView.isHidden = true
     }

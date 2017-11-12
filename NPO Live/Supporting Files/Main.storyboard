@@ -30,11 +30,11 @@
                                     <size key="itemSize" width="528" height="360"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="60" minY="30" maxX="60" maxY="60"/>
+                                    <inset key="sectionInset" minX="60" minY="20" maxX="60" maxY="60"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BigChannelCell" id="JWN-S6-bxN" customClass="BigChannelCell" customModule="NPO_Live" customModuleProvider="target">
-                                        <rect key="frame" x="60" y="30" width="528" height="360"/>
+                                        <rect key="frame" x="60" y="20" width="528" height="360"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="528" height="360"/>
@@ -49,7 +49,7 @@
                                                 <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO 1" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9M4-Yg-qAp" userLabel="LiveTile">
                                                     <rect key="frame" x="0.0" y="64" width="528" height="296"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO 1" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sSd-Lw-aMB" userLabel="LargeLogoView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO 1" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sSd-Lw-aMB" userLabel="LargeLogoView">
                                                     <rect key="frame" x="111" y="106" width="307" height="207"/>
                                                 </imageView>
                                                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO 1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K9j-lh-4lW" userLabel="TinyLogoView">
@@ -107,18 +107,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="308" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO Nieuws" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjb-mZ-thi">
+                                                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO 1" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-3Q-RXo" userLabel="LiveTile">
                                                     <rect key="frame" x="0.0" y="0.0" width="308" height="175"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO Nieuws" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjb-mZ-thi">
+                                                    <rect key="frame" x="73" y="31" width="163" height="112"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="112" id="Gof-kn-ros"/>
+                                                        <constraint firstAttribute="width" constant="163" id="dEg-qe-3bG"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="kjb-mZ-thi" secondAttribute="bottom" id="NW1-yd-2LC"/>
-                                            <constraint firstItem="kjb-mZ-thi" firstAttribute="leading" secondItem="Y7h-2o-K2i" secondAttribute="leading" id="WZA-YH-nFV"/>
-                                            <constraint firstAttribute="trailing" secondItem="kjb-mZ-thi" secondAttribute="trailing" id="roe-BL-hQe"/>
-                                            <constraint firstItem="kjb-mZ-thi" firstAttribute="top" secondItem="Y7h-2o-K2i" secondAttribute="top" id="yKJ-kr-Qh3"/>
+                                            <constraint firstItem="kjb-mZ-thi" firstAttribute="centerX" secondItem="Y7h-2o-K2i" secondAttribute="centerX" id="4vI-eS-tH2"/>
+                                            <constraint firstItem="Qby-3Q-RXo" firstAttribute="leading" secondItem="Y7h-2o-K2i" secondAttribute="leading" id="9eC-Zc-enI"/>
+                                            <constraint firstAttribute="bottom" secondItem="Qby-3Q-RXo" secondAttribute="bottom" id="Mnq-OI-weG"/>
+                                            <constraint firstItem="kjb-mZ-thi" firstAttribute="centerY" secondItem="Y7h-2o-K2i" secondAttribute="centerY" id="RsD-P4-IuY"/>
+                                            <constraint firstItem="Qby-3Q-RXo" firstAttribute="top" secondItem="Y7h-2o-K2i" secondAttribute="top" id="YcB-nA-nmw"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qby-3Q-RXo" secondAttribute="trailing" id="cCm-hx-Sb4"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="liveTile" destination="Qby-3Q-RXo" id="1XD-l9-tgb"/>
                                             <outlet property="logoView" destination="kjb-mZ-thi" id="1Sa-Cp-Zlp"/>
                                         </connections>
                                     </collectionViewCell>
@@ -161,6 +171,6 @@
     </scenes>
     <resources>
         <image name="NPO 1" width="550" height="354"/>
-        <image name="NPO Nieuws" width="500" height="357"/>
+        <image name="NPO Nieuws" width="500" height="334"/>
     </resources>
 </document>

@@ -14,6 +14,7 @@ import AVKit
 class SmallChannelCell: UICollectionViewCell {
 
 	@IBOutlet weak var logoView: UIImageView!
+    @IBOutlet weak var liveTile: UIImageView!
 
     let player = AVPlayer()
     let playerController = AVPlayerViewController()
@@ -22,25 +23,26 @@ class SmallChannelCell: UICollectionViewCell {
 	var channel: Channel? {
 		didSet {
 			setupCell()
-//            addPlayer(channel?.url)
+            addPlayer(channel?.url)
 		}
 	}
-	
+
 	func setupCell() {
         guard
             let channel = channel,
             let image = UIImage(named: channel.title) else { return }
         logoView.image = image
-        logoView.contentMode = .scaleAspectFill
-//        logoView.layer.cornerRadius = 10
 	}
     
     func addPlayer(_ url: URL?) {
         guard let url = url else { return }
-        player.replaceCurrentItem(with: AVPlayerItem(url: url))
+        let playerItem = AVPlayerItem(url: url)
+        player.replaceCurrentItem(with: playerItem)
         player.volume = 0
         playerController.player = player
-        playerController.view.frame = logoView.frame
-        logoView.overlayContentView.addSubview(playerController.view)
+        playerController.view.frame = liveTile.frame
+        liveTile.alpha = 1
+        liveTile.overlayContentView.addSubview(playerController.view)
+        logoView.isHidden = true
     }
 }
