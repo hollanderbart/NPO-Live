@@ -93,25 +93,25 @@
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dUV-X4-76T" userLabel="5 Columns">
                                 <rect key="frame" x="0.0" y="510" width="1920" height="510"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="100" minimumInteritemSpacing="50" id="Stk-zn-Tsw">
-                                    <size key="itemSize" width="308" height="175"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="80" minimumInteritemSpacing="50" id="Stk-zn-Tsw">
+                                    <size key="itemSize" width="300" height="167"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="60" minY="40" maxX="60" maxY="60"/>
+                                    <inset key="sectionInset" minX="60" minY="40" maxX="60" maxY="40"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SmallChannelCell" id="Y7h-2o-K2i" customClass="SmallChannelCell" customModule="NPO_Live" customModuleProvider="target">
-                                        <rect key="frame" x="60" y="40" width="308" height="175"/>
+                                        <rect key="frame" x="60" y="40" width="300" height="167"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="308" height="175"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="167"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO 1" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-3Q-RXo" userLabel="LiveTile">
-                                                    <rect key="frame" x="0.0" y="0.0" width="308" height="175"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="167"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO Nieuws" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjb-mZ-thi">
-                                                    <rect key="frame" x="73" y="31" width="163" height="112"/>
+                                                    <rect key="frame" x="69" y="28" width="163" height="112"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="112" id="Gof-kn-ros"/>
                                                         <constraint firstAttribute="width" constant="163" id="dEg-qe-3bG"/>
