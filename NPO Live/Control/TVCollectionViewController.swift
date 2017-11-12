@@ -2,7 +2,8 @@
 //  TVCollectionViewController.swift
 //  NPO Live
 //
-//  Copyright © 2015 Bart den Hollander. All rights reserved.
+//  Created by Bart den Hollander on 12-11-17.
+//  Copyright © 2017 Bart den Hollander. All rights reserved.
 //
 
 import UIKit
@@ -34,13 +35,13 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
         super.viewWillAppear(animated)
         shouldPlayLiveTiles = true
         fetchStreams(streams)
-        reloadData()
+        reloadAllData()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         shouldPlayLiveTiles = false
-        reloadData()
+        reloadAllData()
     }
 
     // MARK: - UICollectionViewDataSource
@@ -113,14 +114,20 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
                         print(error.localizedDescription)
                     case .success(let streamUrl):
                         channel.url = streamUrl
-                        self?.reloadData()
+                        if channel.title == "NPO 1" {
+                            self?.topCollectionView.reloadItems(at: [IndexPath(row: 0, section: 0)])
+                        } else if channel.title == "NPO 2" {
+                            self?.topCollectionView.reloadItems(at: [IndexPath(row: 1, section: 0)])
+                        } else if channel.title == "NPO 3" {
+                            self?.topCollectionView.reloadItems(at: [IndexPath(row: 2, section: 0)])
+                        }
                     }
                 }
             }
         }
     }
 
-    private func reloadData() {
+    private func reloadAllData() {
         topCollectionView.reloadData()
         bottomCollectionView.reloadData()
     }
