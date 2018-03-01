@@ -46,20 +46,23 @@ class VersionUtility {
         request.httpMethod = "GET"
         request.addValue("application/vnd.github.v3+json", forHTTPHeaderField: "Accept")
 
-        let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, _, error) in
-            if let responseData = data {
-                do {
-                    let response = try decoder.decode(Release.self, from: responseData)
+        DispatchQueue.global(qos: .background).async {
+            let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, _, error) in
+                guard
+                    let responseData = data,
+                    let response = try? decoder.decode(Release.self, from: responseData) else {
+                        if let error = error {
+                            DispatchQueue.main.async {
+                                onCompletion(.error(error))
+                            }
+                        }
+                        return
+                    }
+                DispatchQueue.main.async {
                     onCompletion(.success(response.tag_name))
-                } catch {
-                    onCompletion(.error(error))
-                }
-            } else {
-                if let error = error {
-                    onCompletion(.error(error))
                 }
             }
+            task.resume()
         }
-        task.resume()
     }
 }

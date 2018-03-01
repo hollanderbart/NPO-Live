@@ -167,7 +167,7 @@
 				TargetAttributes = {
 					5123DB851C008A1A00F86B26 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = Z8Q4P9RU5D;
+						DevelopmentTeam = 7S7JD544LJ;
 						LastSwiftMigration = 0910;
 					};
 				};
@@ -374,7 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = Z8Q4P9RU5D;
+				DEVELOPMENT_TEAM = 7S7JD544LJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(PROJECT_DIR)/NPO Live\"",
@@ -395,7 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = Z8Q4P9RU5D;
+				DEVELOPMENT_TEAM = 7S7JD544LJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(PROJECT_DIR)/NPO Live\"",

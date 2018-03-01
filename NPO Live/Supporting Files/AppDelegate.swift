@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  NPO Live
 //
-//  Created by Maurice van Breukelen on 21-11-15.
-//  Copyright © 2015 Maurice van Breukelen. All rights reserved.
+//  Created by Bart den Hollander on 21-11-15.
+//  Copyright © 2015 Bart den Hollander. All rights reserved.
 //
 
 import UIKit
@@ -23,10 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     let alert = UIAlertController(title: "Update available", message: "Version \(newVersion) is available. Your version is \(currentVersion).", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
 
-                    DispatchQueue.main.async {
-                        if let rootViewController = self.window?.rootViewController {
-                            rootViewController.present(alert, animated: true, completion: nil)
-                        }
+                    if let rootViewController = self.window?.rootViewController {
+                        rootViewController.present(alert, animated: true, completion: nil)
                     }
                 case .noNewVersion:
                     break

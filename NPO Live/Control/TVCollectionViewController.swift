@@ -15,8 +15,7 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
     @IBOutlet weak var topCollectionView: UICollectionView!
     @IBOutlet weak var bottomCollectionView: UICollectionView!
 
-    var streams = ChannelProvider.streams
-    var shouldPlayLiveTiles: Bool = true
+    let streams = ChannelProvider.streams
 
     // MARK: - Lifecycle
 
@@ -33,15 +32,7 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        shouldPlayLiveTiles = true
-        fetchStreams(streams)
-        reloadAllData()
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        shouldPlayLiveTiles = false
-        reloadAllData()
+        fetchStreams(for: streams)
     }
 
     // MARK: - UICollectionViewDataSource
@@ -66,14 +57,26 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
                 fatalError("Expected BigChannelCell at index \(indexPath)")
             }
             cell.channel = ChannelProvider.streams[indexPath.row]
-            shouldPlayLiveTiles ? cell.player.play() : cell.player.pause()
+            if cell.channel.playLiveTiles {
+                cell.player.play()
+                cell.liveTile.alpha = 1
+                cell.tinyLogoView.isHidden = false
+                cell.logoView.isHidden = true
+                cell.playerController.view.isHidden = false
+            } else {
+                cell.player.pause()
+                cell.liveTile.alpha = 0
+                cell.tinyLogoView.isHidden = true
+                cell.logoView.isHidden = false
+                cell.playerController.view.isHidden = true
+            }
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SmallChannelCell.identifier, for: indexPath) as? SmallChannelCell else {
                 fatalError("Expected SmallChannelCell at index \(indexPath)")
             }
             cell.channel = ChannelProvider.streams[indexPath.row + 3]
-            shouldPlayLiveTiles ? cell.player.play() : cell.player.pause()
+            cell.channel.playLiveTiles ? cell.player.play() : cell.player.pause()
             return cell
         }
     }
@@ -82,14 +85,40 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        let channel : Channel!
-        if collectionView == topCollectionView {
-            channel = ChannelProvider.streams[indexPath.row]
-        } else {
-            channel = ChannelProvider.streams[indexPath.row + 3]
+        let row: Int = collectionView == topCollectionView ? indexPath.row : indexPath.row + 3
+        let channel = ChannelProvider.streams[row]
+        self.performSegue(withIdentifier: "streamChannel", sender: channel)
+    }
+
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        switch context.nextFocusedView {
+        case let cell as BigChannelCell:
+            guard let indexPath = topCollectionView.indexPath(for: cell) else { return }
+            let channel = ChannelProvider.streams[indexPath.row]
+            channel.playLiveTiles = true
+        case let cell as SmallChannelCell:
+            guard let indexPath = bottomCollectionView.indexPath(for: cell) else { return }
+            let channel = ChannelProvider.streams[indexPath.row + 3]
+            channel.playLiveTiles = true
+        default:
+            break
         }
 
-        self.performSegue(withIdentifier: "streamChannel", sender: channel)
+        switch context.previouslyFocusedItem {
+        case let cell as BigChannelCell:
+            guard let indexPath = topCollectionView.indexPath(for: cell) else { return }
+            let channel = ChannelProvider.streams[indexPath.row]
+            channel.playLiveTiles = false
+        case let cell as SmallChannelCell:
+            guard let indexPath = bottomCollectionView.indexPath(for: cell) else { return }
+            let channel = ChannelProvider.streams[indexPath.row + 3]
+            channel.playLiveTiles = false
+        default:
+            break
+        }
+
+        topCollectionView.reloadData()
+        bottomCollectionView.reloadData()
     }
 
     // MARK: - Navigation
@@ -105,7 +134,7 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
 
     // MARK: - Private
 
-    private func fetchStreams(_ channels: [Channel]) {
+    private func fetchStreams(for channels: [Channel]) {
         channels.forEach { (channel) in
             if channel.url == nil {
                 NPOStream.getStream(channel.streamTitle) { [weak self] (result) in
@@ -145,10 +174,5 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
                 }
             }
         }
-    }
-
-    private func reloadAllData() {
-        topCollectionView.reloadData()
-        bottomCollectionView.reloadData()
     }
 }

@@ -49,9 +49,9 @@ open class NPOStream {
                             return onCompletion(.error(NPOStreamError.initialiseURLFailed))
                         }
                         
-                        DispatchQueue.main.async(execute: {
-                            onCompletion(.success(resultURL))
-                        })
+                    DispatchQueue.main.async {
+                        onCompletion(.success(resultURL))
+                    }
                 }
                 ThirdURLtask.resume()
             }

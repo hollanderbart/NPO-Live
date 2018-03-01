@@ -18,24 +18,22 @@ class SmallChannelCell: UICollectionViewCell {
 
     let player = AVPlayer()
     let playerController = AVPlayerViewController()
+
     static let identifier: String = "SmallChannelCell"
 
-	var channel: Channel? {
+	var channel: Channel! {
 		didSet {
-			setupCell()
-            addPlayer(channel?.url)
+            addPlayer(channel.url)
 		}
 	}
 
-	func setupCell() {
-        guard
-            let channel = channel,
-            let image = UIImage(named: channel.title) else { return }
+    override func layoutSubviews() {
+        guard let image = UIImage(named: channel.title) else { return }
         logoView.image = image
 	}
     
     func addPlayer(_ url: URL?) {
-        guard let url = url else { return }
+        guard let url = url, channel.playLiveTiles else { return }
         let playerItem = AVPlayerItem(url: url)
         player.replaceCurrentItem(with: playerItem)
         player.volume = 0
