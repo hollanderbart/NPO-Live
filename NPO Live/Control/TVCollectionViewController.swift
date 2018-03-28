@@ -15,7 +15,9 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
     @IBOutlet weak var topCollectionView: UICollectionView!
     @IBOutlet weak var bottomCollectionView: UICollectionView!
 
-    let streams = ChannelProvider.streams
+//    let streams = ChannelProvider.streams
+    let topCollectionStreams = Array(ChannelProvider.streams[0...2])
+    let bottomCollectionStreams = Array(ChannelProvider.streams[3...])
 
     // MARK: - Lifecycle
 
@@ -32,50 +34,35 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fetchStreams(for: streams)
+        fetchStreams(for: topCollectionStreams)
+        fetchStreams(for: bottomCollectionStreams)
     }
 
     // MARK: - UICollectionViewDataSource
 
-
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == topCollectionView {
-            return 3
-        } else if collectionView == bottomCollectionView {
-            return ChannelProvider.streams.count - 3
-        }
-        return 0
+        return collectionView == topCollectionView ? topCollectionStreams.count : bottomCollectionStreams.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("reload 2")
         if collectionView == topCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BigChannelCell.identifier, for: indexPath) as? BigChannelCell else {
                 fatalError("Expected BigChannelCell at index \(indexPath)")
             }
-            cell.channel = ChannelProvider.streams[indexPath.row]
+            cell.channel = topCollectionStreams[indexPath.row]
             if cell.channel.playLiveTiles {
-                cell.player.play()
-                cell.liveTile.alpha = 1
-                cell.tinyLogoView.isHidden = false
-                cell.logoView.isHidden = true
-                cell.playerController.view.isHidden = false
+                cell.playLiveTileWhenReady()
             } else {
-                cell.player.pause()
-                cell.liveTile.alpha = 0
-                cell.tinyLogoView.isHidden = true
-                cell.logoView.isHidden = false
-                cell.playerController.view.isHidden = true
+                print("reload top 2")
+                cell.stopLiveTile()
             }
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SmallChannelCell.identifier, for: indexPath) as? SmallChannelCell else {
                 fatalError("Expected SmallChannelCell at index \(indexPath)")
             }
-            cell.channel = ChannelProvider.streams[indexPath.row + 3]
+            cell.channel = bottomCollectionStreams[indexPath.row]
             cell.channel.playLiveTiles ? cell.player.play() : cell.player.pause()
             return cell
         }
@@ -84,41 +71,64 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
     // MARK: - UICollectionViewDelegate
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
-        let row: Int = collectionView == topCollectionView ? indexPath.row : indexPath.row + 3
-        let channel = ChannelProvider.streams[row]
-        self.performSegue(withIdentifier: "streamChannel", sender: channel)
+//        let channel = collectionView == topCollectionView ? indexPath.row : indexPath.row + 3
+//        self.performSegue(withIdentifier: "streamChannel", sender: channel)
+//
+//        let row: Int =
+//        let channel = streams[row]
     }
 
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        var reloadTopCollectionView = false
+        var reloadBottomCollectionView = false
         switch context.nextFocusedView {
         case let cell as BigChannelCell:
-            guard let indexPath = topCollectionView.indexPath(for: cell) else { return }
-            let channel = ChannelProvider.streams[indexPath.row]
+            guard
+                let indexPath = topCollectionView.indexPath(for: cell),
+                case let channel = topCollectionStreams[indexPath.row],
+                !channel.playLiveTiles else { return }
             channel.playLiveTiles = true
+            reloadTopCollectionView = true
+            print("next bigchannel: \(indexPath.row)")
         case let cell as SmallChannelCell:
-            guard let indexPath = bottomCollectionView.indexPath(for: cell) else { return }
-            let channel = ChannelProvider.streams[indexPath.row + 3]
+            guard
+                let indexPath = bottomCollectionView.indexPath(for: cell),
+                case let channel = bottomCollectionStreams[indexPath.row],
+                !channel.playLiveTiles else { return }
             channel.playLiveTiles = true
+            reloadBottomCollectionView = true
+            print("next smallChannel: \(indexPath.row)")
         default:
             break
         }
 
         switch context.previouslyFocusedItem {
         case let cell as BigChannelCell:
-            guard let indexPath = topCollectionView.indexPath(for: cell) else { return }
-            let channel = ChannelProvider.streams[indexPath.row]
+            guard
+                let indexPath = topCollectionView.indexPath(for: cell),
+                case let channel = topCollectionStreams[indexPath.row],
+                channel.playLiveTiles else { return }
             channel.playLiveTiles = false
+            reloadTopCollectionView = true
+            print("previous bigchannel: \(indexPath.row)")
         case let cell as SmallChannelCell:
-            guard let indexPath = bottomCollectionView.indexPath(for: cell) else { return }
-            let channel = ChannelProvider.streams[indexPath.row + 3]
+            guard
+                let indexPath = bottomCollectionView.indexPath(for: cell),
+                case let channel = bottomCollectionStreams[indexPath.row],                channel.playLiveTiles else { return }
             channel.playLiveTiles = false
+            reloadBottomCollectionView = true
+            print("previous smallChannel: \(indexPath.row)")
         default:
             break
         }
-
-        topCollectionView.reloadData()
-        bottomCollectionView.reloadData()
+        if reloadTopCollectionView {
+            print("reload request top")
+            topCollectionView.reloadData()
+        }
+        if reloadBottomCollectionView {
+            print("reload request bottom")
+            bottomCollectionView.reloadData()
+        }
     }
 
     // MARK: - Navigation
@@ -138,37 +148,16 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
         channels.forEach { (channel) in
             if channel.url == nil {
                 NPOStream.getStream(channel.streamTitle) { [weak self] (result) in
+                    guard let strongSelf = self else { return }
                     switch result {
                     case .error(let error):
                         print(error.localizedDescription)
                     case .success(let streamUrl):
                         channel.url = streamUrl
-                        if channel.title == "NPO 1" {
-                            self?.topCollectionView.reloadItems(at: [IndexPath(row: 0, section: 0)])
-                        } else if channel.title == "NPO 2" {
-                            self?.topCollectionView.reloadItems(at: [IndexPath(row: 1, section: 0)])
-                        } else if channel.title == "NPO 3" {
-                            self?.topCollectionView.reloadItems(at: [IndexPath(row: 2, section: 0)])
-                        } else if channel.title == "NPO Nieuws" {
-                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 0, section: 0)])
-                        } else if channel.title == "NPO Politiek" {
-                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 1, section: 0)])
-                        } else if channel.title == "NPO 101" {
-                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 2, section: 0)])
-                        } else if channel.title == "NPO Cultura" {
-                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 3, section: 0)])
-                        } else if channel.title == "NPO Zapp" {
-                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 4, section: 0)])
-                        } else if channel.title == "NPO Radio 1" {
-                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 5, section: 0)])
-                        } else if channel.title == "NPO Radio 2" {
-                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 6, section: 0)])
-                        } else if channel.title == "NPO 3FM" {
-                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 7, section: 0)])
-                        } else if channel.title == "NPO Radio 4" {
-                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 8, section: 0)])
-                        } else if channel.title == "NPO FunX" {
-                            self?.bottomCollectionView.reloadItems(at: [IndexPath(row: 9, section: 0)])
+                        if strongSelf.topCollectionStreams.contains(where: { $0.title == channel.title }) {
+                            strongSelf.topCollectionView.reloadData()
+                        } else if strongSelf.bottomCollectionStreams.contains(where: { $0.title == channel.title }) {
+                            strongSelf.bottomCollectionView.reloadData()
                         }
                     }
                 }

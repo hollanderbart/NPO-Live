@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13770" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,13 +46,17 @@
                                                     <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO 1" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9M4-Yg-qAp" userLabel="LiveTile">
+                                                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO Zapp" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9M4-Yg-qAp" userLabel="LiveTile">
                                                     <rect key="frame" x="0.0" y="64" width="528" height="296"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO 1" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sSd-Lw-aMB" userLabel="LargeLogoView">
-                                                    <rect key="frame" x="111" y="106" width="307" height="207"/>
+                                                    <rect key="frame" x="114" y="112" width="300" height="188"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="sSd-Lw-aMB" secondAttribute="height" multiplier="16:10" id="5NR-RQ-eaE"/>
+                                                        <constraint firstAttribute="width" constant="300" id="6OT-Ki-cQ6"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO 1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K9j-lh-4lW" userLabel="TinyLogoView">
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO 1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K9j-lh-4lW" userLabel="SmallLogoView">
                                                     <rect key="frame" x="0.0" y="0.0" width="87" height="56"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="87" id="6W2-oC-7Ou"/>
@@ -67,11 +71,9 @@
                                             <constraint firstItem="K9j-lh-4lW" firstAttribute="top" secondItem="uY3-Ai-VaI" secondAttribute="top" id="HKz-kK-Vo3"/>
                                             <constraint firstItem="K9j-lh-4lW" firstAttribute="leading" secondItem="JWN-S6-bxN" secondAttribute="leading" id="NCm-cV-3BV"/>
                                             <constraint firstItem="K9j-lh-4lW" firstAttribute="top" secondItem="JWN-S6-bxN" secondAttribute="top" id="OjO-Cl-FPM"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="sSd-Lw-aMB" secondAttribute="bottom" constant="39" id="Urj-P8-FUj"/>
                                             <constraint firstItem="9M4-Yg-qAp" firstAttribute="top" secondItem="K9j-lh-4lW" secondAttribute="bottom" constant="8" symbolic="YES" id="enW-My-Xc3"/>
-                                            <constraint firstItem="sSd-Lw-aMB" firstAttribute="top" secondItem="uY3-Ai-VaI" secondAttribute="bottom" constant="50" id="fHv-7P-u0Y"/>
+                                            <constraint firstItem="sSd-Lw-aMB" firstAttribute="top" secondItem="uY3-Ai-VaI" secondAttribute="bottom" constant="56" id="fHv-7P-u0Y"/>
                                             <constraint firstItem="uY3-Ai-VaI" firstAttribute="top" secondItem="JWN-S6-bxN" secondAttribute="top" id="k34-Vq-aNG"/>
-                                            <constraint firstItem="sSd-Lw-aMB" firstAttribute="leading" secondItem="9M4-Yg-qAp" secondAttribute="leading" constant="111" id="mj3-mK-of9"/>
                                             <constraint firstItem="sSd-Lw-aMB" firstAttribute="centerX" secondItem="JWN-S6-bxN" secondAttribute="centerX" id="pxH-om-bJj"/>
                                             <constraint firstItem="uY3-Ai-VaI" firstAttribute="height" secondItem="K9j-lh-4lW" secondAttribute="height" id="uUc-id-Jl0"/>
                                             <constraint firstItem="9M4-Yg-qAp" firstAttribute="leading" secondItem="K9j-lh-4lW" secondAttribute="leading" id="vlg-R2-BSh"/>
@@ -80,9 +82,9 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="label" destination="uY3-Ai-VaI" id="KJH-4R-PZC"/>
+                                            <outlet property="largeLogoView" destination="sSd-Lw-aMB" id="dcY-TF-TW6"/>
                                             <outlet property="liveTile" destination="9M4-Yg-qAp" id="bUB-zf-qcE"/>
-                                            <outlet property="logoView" destination="sSd-Lw-aMB" id="nT6-oT-VSY"/>
-                                            <outlet property="tinyLogoView" destination="K9j-lh-4lW" id="7zp-YD-hBG"/>
+                                            <outlet property="smallLogoView" destination="K9j-lh-4lW" id="0P5-MG-hCf"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -172,5 +174,6 @@
     <resources>
         <image name="NPO 1" width="550" height="354"/>
         <image name="NPO Nieuws" width="500" height="334"/>
+        <image name="NPO Zapp" width="500" height="357"/>
     </resources>
 </document>
