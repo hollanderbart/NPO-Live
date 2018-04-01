@@ -15,7 +15,6 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
     @IBOutlet weak var topCollectionView: UICollectionView!
     @IBOutlet weak var bottomCollectionView: UICollectionView!
 
-//    let streams = ChannelProvider.streams
     let topCollectionStreams = Array(ChannelProvider.streams[0...2])
     let bottomCollectionStreams = Array(ChannelProvider.streams[3...])
 
@@ -73,11 +72,9 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
     // MARK: - UICollectionViewDelegate
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let channel = collectionView == topCollectionView ? indexPath.row : indexPath.row + 3
-//        self.performSegue(withIdentifier: "streamChannel", sender: channel)
-//
-//        let row: Int =
-//        let channel = streams[row]
+        let channel = collectionView == topCollectionView ? topCollectionStreams[indexPath.row] :
+            bottomCollectionStreams[indexPath.row]
+        self.performSegue(withIdentifier: "streamChannel", sender: channel)
     }
 
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {

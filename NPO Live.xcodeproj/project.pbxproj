@@ -69,7 +69,7 @@
 		5123DB881C008A1A00F86B26 /* NPO Live */ = {
 			isa = PBXGroup;
 			children = (
-				932FC16A1FB4454E00FDACBF /* Control */,
+				932FC16A1FB4454E00FDACBF /* Controller */,
 				932FC1691FB4453F00FDACBF /* View */,
 				932FC16B1FB4458600FDACBF /* Supporting Files */,
 				938EF14720718B1000C03585 /* Utilities */,
@@ -95,14 +95,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		932FC16A1FB4454E00FDACBF /* Control */ = {
+		932FC16A1FB4454E00FDACBF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				511C0F581C06389D00B15BDA /* TVCollectionViewController.swift */,
 				511C0F591C06389D00B15BDA /* PlayerViewController.swift */,
-				932C01981FB34EDD0028D251 /* VersionUtility.swift */,
 			);
-			path = Control;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		932FC16B1FB4458600FDACBF /* Supporting Files */ = {
@@ -120,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				938EF14A20718BE300C03585 /* DebugLog.swift */,
+				932C01981FB34EDD0028D251 /* VersionUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
