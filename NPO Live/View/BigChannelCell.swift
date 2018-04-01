@@ -12,28 +12,26 @@ import AVKit
 
 class BigChannelCell: UICollectionViewCell {
 
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var liveTile: UIImageView!
     @IBOutlet weak var largeLogoView: UIImageView!
     @IBOutlet weak var smallLogoView: UIImageView!
-    @IBOutlet weak var liveTile: UIImageView!
-    @IBOutlet weak var label: UILabel!
 
-    lazy var player: AVPlayer = {
+    lazy private var player: AVPlayer = {
         let player = AVPlayer()
-        player.automaticallyWaitsToMinimizeStalling = false
         player.volume = 0
         return player
     }()
-    lazy var playerController: AVPlayerViewController = {
+    lazy private var playerController: AVPlayerViewController = {
         let playerController = AVPlayerViewController()
         playerController.player = player
         return playerController
     }()
 
-    var playbackLikelyToKeepUpKeyPathObserver: NSKeyValueObservation?
-    var playbackBufferFullObserver: NSKeyValueObservation?
+    private var playbackLikelyToKeepUpKeyPathObserver: NSKeyValueObservation?
+    private var playbackBufferFullObserver: NSKeyValueObservation?
 
     static let identifier: String = "BigChannelCell"
-    static let animateDuration: TimeInterval = 0.5
 
 	var channel: Channel! {
 		didSet {
@@ -45,7 +43,7 @@ class BigChannelCell: UICollectionViewCell {
         guard let image = UIImage(named: channel.title) else { return }
         largeLogoView.image = image
         smallLogoView.image = image
-        label.text = ""
+        title.text = ""
     }
 
     func addPlayer(_ url: URL?) {
@@ -57,15 +55,15 @@ class BigChannelCell: UICollectionViewCell {
 
     func playLiveTileWhenReady() {
         guard channel.url != nil, channel.playLiveTiles else { return }
-        print("play live tile \(channel.title)")
-        observeBuffering()
+        DebugLog("play live tile \(channel.title)")
         player.play()
+        observeBuffering()
     }
 
     func stopLiveTile() {
-        print("got stop sign \(channel.title)")
-        guard !smallLogoView.isHidden else { return }
-        print("stop live tile \(channel.title)")
+        DebugLog("got stop sign \(channel.title)")
+        guard liveTile.alpha == 1 else { return }
+        DebugLog("stop live tile \(channel.title)")
         player.pause()
         hideLiveTile()
     }
@@ -76,17 +74,18 @@ class BigChannelCell: UICollectionViewCell {
         let playbackLikelyToKeepUpKeyPath = \AVPlayerItem.playbackLikelyToKeepUp
         playbackLikelyToKeepUpKeyPathObserver = player.currentItem?.observe(playbackLikelyToKeepUpKeyPath, options: [.new]) { [weak self] (_, _) in
             guard let strongSelf = self else { return }
-            print("buffer is going to be full.")
+            DebugLog("buffer is going to be full.")
             strongSelf.showLiveTile()
         }
     }
 
     private func showLiveTile() {
-        guard channel.playLiveTiles else {
+        guard channel.playLiveTiles, liveTile.alpha == 0 else {
+            DebugLog("from show to stop")
             stopLiveTile()
             return
         }
-        print("show livetile \(channel.title)")
+        DebugLog("show livetile \(channel.title)")
         liveTile.alpha = 1
         largeLogoView.isHidden = true
         liveTile.overlayContentView.addSubview(playerController.view)
@@ -95,7 +94,7 @@ class BigChannelCell: UICollectionViewCell {
     }
 
     private func hideLiveTile() {
-        print("hide livetile \(channel.title)")
+        DebugLog("hide livetile \(channel.title)")
         liveTile.alpha = 0
         largeLogoView.isHidden = false
         smallLogoView.isHidden = true

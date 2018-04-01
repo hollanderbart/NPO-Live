@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +40,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="528" height="360"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOS Journaal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uY3-Ai-VaI">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOS Journaal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uY3-Ai-VaI" userLabel="Title">
                                                     <rect key="frame" x="95" y="0.0" width="433" height="56"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                                     <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,7 +50,7 @@
                                                     <rect key="frame" x="0.0" y="64" width="528" height="296"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO 1" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sSd-Lw-aMB" userLabel="LargeLogoView">
-                                                    <rect key="frame" x="114" y="112" width="300" height="188"/>
+                                                    <rect key="frame" x="114" y="118" width="300" height="188"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="sSd-Lw-aMB" secondAttribute="height" multiplier="16:10" id="5NR-RQ-eaE"/>
                                                         <constraint firstAttribute="width" constant="300" id="6OT-Ki-cQ6"/>
@@ -67,24 +67,24 @@
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="9M4-Yg-qAp" secondAttribute="bottom" id="1FI-PY-FHq"/>
+                                            <constraint firstItem="sSd-Lw-aMB" firstAttribute="centerY" secondItem="9M4-Yg-qAp" secondAttribute="centerY" id="6XS-TL-uN2"/>
                                             <constraint firstItem="9M4-Yg-qAp" firstAttribute="trailing" secondItem="uY3-Ai-VaI" secondAttribute="trailing" id="6kk-QN-k2F"/>
+                                            <constraint firstItem="sSd-Lw-aMB" firstAttribute="centerX" secondItem="9M4-Yg-qAp" secondAttribute="centerX" id="DSQ-Xu-6ea"/>
                                             <constraint firstItem="K9j-lh-4lW" firstAttribute="top" secondItem="uY3-Ai-VaI" secondAttribute="top" id="HKz-kK-Vo3"/>
                                             <constraint firstItem="K9j-lh-4lW" firstAttribute="leading" secondItem="JWN-S6-bxN" secondAttribute="leading" id="NCm-cV-3BV"/>
                                             <constraint firstItem="K9j-lh-4lW" firstAttribute="top" secondItem="JWN-S6-bxN" secondAttribute="top" id="OjO-Cl-FPM"/>
                                             <constraint firstItem="9M4-Yg-qAp" firstAttribute="top" secondItem="K9j-lh-4lW" secondAttribute="bottom" constant="8" symbolic="YES" id="enW-My-Xc3"/>
-                                            <constraint firstItem="sSd-Lw-aMB" firstAttribute="top" secondItem="uY3-Ai-VaI" secondAttribute="bottom" constant="56" id="fHv-7P-u0Y"/>
                                             <constraint firstItem="uY3-Ai-VaI" firstAttribute="top" secondItem="JWN-S6-bxN" secondAttribute="top" id="k34-Vq-aNG"/>
-                                            <constraint firstItem="sSd-Lw-aMB" firstAttribute="centerX" secondItem="JWN-S6-bxN" secondAttribute="centerX" id="pxH-om-bJj"/>
                                             <constraint firstItem="uY3-Ai-VaI" firstAttribute="height" secondItem="K9j-lh-4lW" secondAttribute="height" id="uUc-id-Jl0"/>
                                             <constraint firstItem="9M4-Yg-qAp" firstAttribute="leading" secondItem="K9j-lh-4lW" secondAttribute="leading" id="vlg-R2-BSh"/>
                                             <constraint firstAttribute="trailing" secondItem="uY3-Ai-VaI" secondAttribute="trailing" id="wwS-TL-xTg"/>
                                             <constraint firstItem="uY3-Ai-VaI" firstAttribute="leading" secondItem="K9j-lh-4lW" secondAttribute="trailing" constant="8" symbolic="YES" id="yeL-Q9-iXg"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="label" destination="uY3-Ai-VaI" id="KJH-4R-PZC"/>
                                             <outlet property="largeLogoView" destination="sSd-Lw-aMB" id="dcY-TF-TW6"/>
                                             <outlet property="liveTile" destination="9M4-Yg-qAp" id="bUB-zf-qcE"/>
                                             <outlet property="smallLogoView" destination="K9j-lh-4lW" id="0P5-MG-hCf"/>
+                                            <outlet property="title" destination="uY3-Ai-VaI" id="0bi-09-Ia3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -95,43 +95,64 @@
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dUV-X4-76T" userLabel="5 Columns">
                                 <rect key="frame" x="0.0" y="510" width="1920" height="510"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="80" minimumInteritemSpacing="50" id="Stk-zn-Tsw">
-                                    <size key="itemSize" width="300" height="167"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="40" id="Stk-zn-Tsw">
+                                    <size key="itemSize" width="285" height="201"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="60" minY="40" maxX="60" maxY="40"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SmallChannelCell" id="Y7h-2o-K2i" customClass="SmallChannelCell" customModule="NPO_Live" customModuleProvider="target">
-                                        <rect key="frame" x="60" y="40" width="300" height="167"/>
+                                        <rect key="frame" x="60" y="40" width="285" height="201"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="167"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="285" height="201"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO 1" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-3Q-RXo" userLabel="LiveTile">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="167"/>
+                                                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO Zapp" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-3Q-RXo" userLabel="LiveTile">
+                                                    <rect key="frame" x="0.0" y="41" width="285" height="160"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO Nieuws" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjb-mZ-thi">
-                                                    <rect key="frame" x="69" y="28" width="163" height="112"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO Nieuws" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjb-mZ-thi" userLabel="LargeLogoView">
+                                                    <rect key="frame" x="43" y="55" width="200" height="133"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="112" id="Gof-kn-ros"/>
-                                                        <constraint firstAttribute="width" constant="163" id="dEg-qe-3bG"/>
+                                                        <constraint firstAttribute="width" constant="200" id="Bxz-Cm-6GJ"/>
+                                                        <constraint firstAttribute="width" secondItem="kjb-mZ-thi" secondAttribute="height" multiplier="15:10" id="Lqu-DZ-haR"/>
                                                     </constraints>
                                                 </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO 1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOU-Ut-ByT" userLabel="SmallLogoView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="33"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="pOU-Ut-ByT" secondAttribute="height" multiplier="15:10" id="3lL-Qj-wTG"/>
+                                                        <constraint firstAttribute="width" constant="50" id="HS5-gP-pzf"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOS Journaal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tII-7d-Jun" userLabel="Title">
+                                                    <rect key="frame" x="58" y="0.0" width="227" height="33"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="kjb-mZ-thi" firstAttribute="centerX" secondItem="Y7h-2o-K2i" secondAttribute="centerX" id="4vI-eS-tH2"/>
+                                            <constraint firstItem="pOU-Ut-ByT" firstAttribute="leading" secondItem="Qby-3Q-RXo" secondAttribute="leading" id="6Jl-nx-aHD"/>
+                                            <constraint firstItem="tII-7d-Jun" firstAttribute="height" secondItem="pOU-Ut-ByT" secondAttribute="height" id="6dG-jl-kDD"/>
                                             <constraint firstItem="Qby-3Q-RXo" firstAttribute="leading" secondItem="Y7h-2o-K2i" secondAttribute="leading" id="9eC-Zc-enI"/>
+                                            <constraint firstItem="kjb-mZ-thi" firstAttribute="centerX" secondItem="Qby-3Q-RXo" secondAttribute="centerX" id="DAy-SS-GHh"/>
                                             <constraint firstAttribute="bottom" secondItem="Qby-3Q-RXo" secondAttribute="bottom" id="Mnq-OI-weG"/>
-                                            <constraint firstItem="kjb-mZ-thi" firstAttribute="centerY" secondItem="Y7h-2o-K2i" secondAttribute="centerY" id="RsD-P4-IuY"/>
-                                            <constraint firstItem="Qby-3Q-RXo" firstAttribute="top" secondItem="Y7h-2o-K2i" secondAttribute="top" id="YcB-nA-nmw"/>
+                                            <constraint firstItem="tII-7d-Jun" firstAttribute="trailing" secondItem="Qby-3Q-RXo" secondAttribute="trailing" id="WqW-TA-oon"/>
+                                            <constraint firstItem="tII-7d-Jun" firstAttribute="leading" secondItem="pOU-Ut-ByT" secondAttribute="trailing" constant="8" symbolic="YES" id="YdE-a4-RGz"/>
+                                            <constraint firstItem="pOU-Ut-ByT" firstAttribute="top" secondItem="tII-7d-Jun" secondAttribute="top" id="c5J-Td-Clm"/>
                                             <constraint firstAttribute="trailing" secondItem="Qby-3Q-RXo" secondAttribute="trailing" id="cCm-hx-Sb4"/>
+                                            <constraint firstItem="tII-7d-Jun" firstAttribute="top" secondItem="Y7h-2o-K2i" secondAttribute="top" id="fKa-IC-7Si"/>
+                                            <constraint firstItem="kjb-mZ-thi" firstAttribute="centerY" secondItem="Qby-3Q-RXo" secondAttribute="centerY" id="lfD-n7-yNM"/>
+                                            <constraint firstItem="Qby-3Q-RXo" firstAttribute="top" secondItem="pOU-Ut-ByT" secondAttribute="bottom" constant="8" symbolic="YES" id="uux-mC-WpK"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="largeLogoView" destination="kjb-mZ-thi" id="JPe-bd-a4P"/>
                                             <outlet property="liveTile" destination="Qby-3Q-RXo" id="1XD-l9-tgb"/>
-                                            <outlet property="logoView" destination="kjb-mZ-thi" id="1Sa-Cp-Zlp"/>
+                                            <outlet property="smallLogoView" destination="pOU-Ut-ByT" id="p7A-AG-Jyw"/>
+                                            <outlet property="title" destination="tII-7d-Jun" id="Gwf-sS-HYi"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

@@ -45,7 +45,6 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("reload 2")
         if collectionView == topCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BigChannelCell.identifier, for: indexPath) as? BigChannelCell else {
                 fatalError("Expected BigChannelCell at index \(indexPath)")
@@ -54,7 +53,6 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
             if cell.channel.playLiveTiles {
                 cell.playLiveTileWhenReady()
             } else {
-                print("reload top 2")
                 cell.stopLiveTile()
             }
             return cell
@@ -63,7 +61,11 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
                 fatalError("Expected SmallChannelCell at index \(indexPath)")
             }
             cell.channel = bottomCollectionStreams[indexPath.row]
-            cell.channel.playLiveTiles ? cell.player.play() : cell.player.pause()
+            if cell.channel.playLiveTiles {
+                cell.playLiveTileWhenReady()
+            } else {
+                cell.stopLiveTile()
+            }
             return cell
         }
     }
@@ -89,7 +91,7 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
                 !channel.playLiveTiles else { return }
             channel.playLiveTiles = true
             reloadTopCollectionView = true
-            print("next bigchannel: \(indexPath.row)")
+            DebugLog("next bigchannel: \(indexPath.row)")
         case let cell as SmallChannelCell:
             guard
                 let indexPath = bottomCollectionView.indexPath(for: cell),
@@ -97,7 +99,7 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
                 !channel.playLiveTiles else { return }
             channel.playLiveTiles = true
             reloadBottomCollectionView = true
-            print("next smallChannel: \(indexPath.row)")
+            DebugLog("next smallChannel: \(indexPath.row)")
         default:
             break
         }
@@ -110,23 +112,23 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
                 channel.playLiveTiles else { return }
             channel.playLiveTiles = false
             reloadTopCollectionView = true
-            print("previous bigchannel: \(indexPath.row)")
+            DebugLog("previous bigchannel: \(indexPath.row)")
         case let cell as SmallChannelCell:
             guard
                 let indexPath = bottomCollectionView.indexPath(for: cell),
                 case let channel = bottomCollectionStreams[indexPath.row],                channel.playLiveTiles else { return }
             channel.playLiveTiles = false
             reloadBottomCollectionView = true
-            print("previous smallChannel: \(indexPath.row)")
+            DebugLog("previous smallChannel: \(indexPath.row)")
         default:
             break
         }
         if reloadTopCollectionView {
-            print("reload request top")
+            DebugLog("reload request top")
             topCollectionView.reloadData()
         }
         if reloadBottomCollectionView {
-            print("reload request bottom")
+            DebugLog("reload request bottom")
             bottomCollectionView.reloadData()
         }
     }
@@ -151,7 +153,7 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
                     guard let strongSelf = self else { return }
                     switch result {
                     case .error(let error):
-                        print(error.localizedDescription)
+                        DebugLog(error.localizedDescription)
                     case .success(let streamUrl):
                         channel.url = streamUrl
                         if strongSelf.topCollectionStreams.contains(where: { $0.title == channel.title }) {

@@ -35,7 +35,7 @@ class VersionUtility {
                     onCompletion(.noNewVersion)
                 }
             case .error(let error):
-                print(error)
+                DebugLog(error.localizedDescription)
             }
         }
     }
