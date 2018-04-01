@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		511C0F491C06384900B15BDA /* ChannelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511C0F471C06384900B15BDA /* ChannelProvider.swift */; };
 		511C0F501C06387700B15BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511C0F4E1C06387700B15BDA /* AppDelegate.swift */; };
 		511C0F511C06387700B15BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511C0F4F1C06387700B15BDA /* Assets.xcassets */; };
 		511C0F551C06388D00B15BDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511C0F521C06388D00B15BDA /* Main.storyboard */; };
@@ -22,7 +21,6 @@
 
 /* Begin PBXFileReference section */
 		4D473A8CFCE3B5A086B71258 /* Pods-NPO Live.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPO Live.release.xcconfig"; path = "Pods/Target Support Files/Pods-NPO Live/Pods-NPO Live.release.xcconfig"; sourceTree = "<group>"; };
-		511C0F471C06384900B15BDA /* ChannelProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelProvider.swift; sourceTree = "<group>"; };
 		511C0F4E1C06387700B15BDA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		511C0F4F1C06387700B15BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		511C0F521C06388D00B15BDA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				932FC16A1FB4454E00FDACBF /* Control */,
-				932FC1681FB4453500FDACBF /* Model */,
 				932FC1691FB4453F00FDACBF /* View */,
 				932FC16B1FB4458600FDACBF /* Supporting Files */,
 				938EF14720718B1000C03585 /* Utilities */,
@@ -87,14 +84,6 @@
 				4D473A8CFCE3B5A086B71258 /* Pods-NPO Live.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		932FC1681FB4453500FDACBF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				511C0F471C06384900B15BDA /* ChannelProvider.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		932FC1691FB4453F00FDACBF /* View */ = {
@@ -271,7 +260,6 @@
 				938EF14B20718BE300C03585 /* DebugLog.swift in Sources */,
 				511C0F571C06388D00B15BDA /* SmallChannelCell.swift in Sources */,
 				511C0F5B1C06389D00B15BDA /* PlayerViewController.swift in Sources */,
-				511C0F491C06384900B15BDA /* ChannelProvider.swift in Sources */,
 				932C01991FB34EDD0028D251 /* VersionUtility.swift in Sources */,
 				511C0F561C06388D00B15BDA /* BigChannelCell.swift in Sources */,
 			);
