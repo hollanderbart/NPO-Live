@@ -49,6 +49,7 @@ class BigChannelCell: UICollectionViewCell {
     func addPlayer(_ url: URL?) {
         guard let url = url, channel.playLiveTiles else { return }
         let playerItem = AVPlayerItem(url: url)
+        DebugLog("player added \(channel.title)")
         player.replaceCurrentItem(with: playerItem)
         playerController.view.frame = CGRect(origin: CGPoint.zero, size: liveTile.frame.size)
     }
@@ -104,7 +105,7 @@ class BigChannelCell: UICollectionViewCell {
     // MARK: Reuse
 
     override func prepareForReuse() {
-        hideLiveTile()
-        player.replaceCurrentItem(with: nil)
+//        hideLiveTile()
+//        player.replaceCurrentItem(with: nil)
     }
 }

@@ -49,22 +49,12 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
                 fatalError("Expected BigChannelCell at index \(indexPath)")
             }
             cell.channel = topCollectionStreams[indexPath.row]
-            if cell.channel.playLiveTiles {
-                cell.playLiveTileWhenReady()
-            } else {
-                cell.stopLiveTile()
-            }
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SmallChannelCell.identifier, for: indexPath) as? SmallChannelCell else {
                 fatalError("Expected SmallChannelCell at index \(indexPath)")
             }
             cell.channel = bottomCollectionStreams[indexPath.row]
-            if cell.channel.playLiveTiles {
-                cell.playLiveTileWhenReady()
-            } else {
-                cell.stopLiveTile()
-            }
             return cell
         }
     }
@@ -78,56 +68,56 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
     }
 
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        var reloadTopCollectionView = false
-        var reloadBottomCollectionView = false
-        switch context.nextFocusedView {
-        case let cell as BigChannelCell:
-            guard
-                let indexPath = topCollectionView.indexPath(for: cell),
-                case let channel = topCollectionStreams[indexPath.row],
-                !channel.playLiveTiles else { return }
-            channel.playLiveTiles = true
-            reloadTopCollectionView = true
-            DebugLog("next bigchannel: \(indexPath.row)")
-        case let cell as SmallChannelCell:
-            guard
-                let indexPath = bottomCollectionView.indexPath(for: cell),
-                case let channel = bottomCollectionStreams[indexPath.row],
-                !channel.playLiveTiles else { return }
-            channel.playLiveTiles = true
-            reloadBottomCollectionView = true
-            DebugLog("next smallChannel: \(indexPath.row)")
-        default:
-            break
-        }
+        super.didUpdateFocus(in: context, with: coordinator)
 
-        switch context.previouslyFocusedItem {
-        case let cell as BigChannelCell:
-            guard
-                let indexPath = topCollectionView.indexPath(for: cell),
-                case let channel = topCollectionStreams[indexPath.row],
-                channel.playLiveTiles else { return }
-            channel.playLiveTiles = false
-            reloadTopCollectionView = true
-            DebugLog("previous bigchannel: \(indexPath.row)")
-        case let cell as SmallChannelCell:
-            guard
-                let indexPath = bottomCollectionView.indexPath(for: cell),
-                case let channel = bottomCollectionStreams[indexPath.row],                channel.playLiveTiles else { return }
-            channel.playLiveTiles = false
-            reloadBottomCollectionView = true
-            DebugLog("previous smallChannel: \(indexPath.row)")
-        default:
-            break
-        }
-        if reloadTopCollectionView {
-            DebugLog("reload request top")
-            topCollectionView.reloadData()
-        }
-        if reloadBottomCollectionView {
-            DebugLog("reload request bottom")
-            bottomCollectionView.reloadData()
-        }
+        coordinator.addCoordinatedFocusingAnimations({ [weak self] (_) in
+            guard let strongSelf = self else { return }
+            switch context.nextFocusedView {
+            case let cell as BigChannelCell:
+                guard
+                    let indexPath = strongSelf.topCollectionView.indexPath(for: cell),
+                    case let channel = strongSelf.topCollectionStreams[indexPath.row],
+                    !channel.playLiveTiles else { return }
+                channel.playLiveTiles = true
+                cell.channel = channel
+                cell.playLiveTileWhenReady()
+                DebugLog("next bigchannel: \(indexPath.row)")
+            case let cell as SmallChannelCell:
+                guard
+                    let indexPath = strongSelf.bottomCollectionView.indexPath(for: cell),
+                    case let channel = strongSelf.bottomCollectionStreams[indexPath.row],
+                    !channel.playLiveTiles else { return }
+                channel.playLiveTiles = true
+                cell.channel = channel
+                cell.playLiveTileWhenReady()
+                DebugLog("next smallChannel: \(indexPath.row)")
+            default:
+                break
+            }
+        })
+
+        coordinator.addCoordinatedUnfocusingAnimations({ [weak self] (_) in
+            guard let strongSelf = self else { return }
+            switch context.previouslyFocusedItem {
+            case let cell as BigChannelCell:
+                guard
+                    let indexPath = strongSelf.topCollectionView.indexPath(for: cell),
+                    case let channel = strongSelf.topCollectionStreams[indexPath.row],
+                    channel.playLiveTiles else { return }
+                channel.playLiveTiles = false
+                cell.stopLiveTile()
+                DebugLog("previous bigchannel: \(indexPath.row)")
+            case let cell as SmallChannelCell:
+                guard
+                    let indexPath = strongSelf.bottomCollectionView.indexPath(for: cell),
+                    case let channel = strongSelf.bottomCollectionStreams[indexPath.row],                channel.playLiveTiles else { return }
+                channel.playLiveTiles = false
+                cell.stopLiveTile()
+                DebugLog("previous smallChannel: \(indexPath.row)")
+            default:
+                break
+            }
+        })
     }
 
     // MARK: - Navigation

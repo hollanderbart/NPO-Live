@@ -104,8 +104,8 @@ class SmallChannelCell: UICollectionViewCell {
 
     // MARK: Reuse
 
-    override func prepareForReuse() {
-        hideLiveTile()
-        player.replaceCurrentItem(with: nil)
-    }
+//    override func prepareForReuse() {
+//        hideLiveTile()
+//        player.replaceCurrentItem(with: nil)
+//    }
 }
