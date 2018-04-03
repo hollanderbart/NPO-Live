@@ -46,7 +46,7 @@
                                                     <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO Zapp" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9M4-Yg-qAp" userLabel="LiveTile">
+                                                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clear" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9M4-Yg-qAp" userLabel="LiveTile">
                                                     <rect key="frame" x="0.0" y="64" width="528" height="296"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO 1" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sSd-Lw-aMB" userLabel="LargeLogoView">
@@ -109,7 +109,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="285" height="201"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO Zapp" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-3Q-RXo" userLabel="LiveTile">
+                                                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clear" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-3Q-RXo" userLabel="LiveTile">
                                                     <rect key="frame" x="0.0" y="41" width="285" height="160"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPO Nieuws" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjb-mZ-thi" userLabel="LargeLogoView">
@@ -193,8 +193,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Clear" width="515" height="346"/>
         <image name="NPO 1" width="550" height="354"/>
         <image name="NPO Nieuws" width="500" height="334"/>
-        <image name="NPO Zapp" width="500" height="357"/>
     </resources>
 </document>

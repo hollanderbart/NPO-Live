@@ -55,6 +55,7 @@ class BigChannelCell: UICollectionViewCell {
     }
 
     func playLiveTileWhenReady() {
+        DebugLog("planning to play live tile \(channel.title)")
         guard channel.url != nil, channel.playLiveTiles else { return }
         DebugLog("play live tile \(channel.title)")
         player.play()

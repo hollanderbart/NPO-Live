@@ -49,12 +49,18 @@ final class TVCollectionViewController: UIViewController, UICollectionViewDataSo
                 fatalError("Expected BigChannelCell at index \(indexPath)")
             }
             cell.channel = topCollectionStreams[indexPath.row]
+            if cell.channel.playLiveTiles {
+                cell.playLiveTileWhenReady()
+            }
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SmallChannelCell.identifier, for: indexPath) as? SmallChannelCell else {
                 fatalError("Expected SmallChannelCell at index \(indexPath)")
             }
             cell.channel = bottomCollectionStreams[indexPath.row]
+            if cell.channel.playLiveTiles {
+                cell.playLiveTileWhenReady()
+            }
             return cell
         }
     }
